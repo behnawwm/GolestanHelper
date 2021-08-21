@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mainListAdapter: MainListAdapter
 
-
+    private val loadingDuration: Long
+        get() = (resources.getInteger(R.integer.loadingAnimDuration) / animationPlaybackSpeed).toLong()
     /**
      * Used to open nav drawer when opening app for first time (to show options)
      */
@@ -74,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = mainListAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
+        updateRecyclerViewAnimDuration()
 
         // Nav Drawer Init
         drawerIcon.setOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
@@ -85,6 +87,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun updateRecyclerViewAnimDuration() = recyclerView.itemAnimator?.run {
+        removeDuration = loadingDuration * 60 / 100
+        addDuration = loadingDuration
+    }
     /**
      * Open browser for given string resId URL
      */
