@@ -33,7 +33,7 @@ class FiltersPagerAdapter(context: Context, private val listener: (updatedPositi
     // Methods
     ///////////////////////////////////////////////////////////////////////////
 
-    override fun getItemCount(): Int = FiltersLayout.numTabs
+    override fun getItemCount(): Int = 5 //FiltersLayout.numTabs //todo
 
     override fun getItemViewType(position: Int): Int = when {
         position == 2 -> R.layout.filter_layout_3

@@ -229,3 +229,19 @@ class MainListAdapter(context: Context) : RecyclerView.Adapter<MainListAdapter.L
         val listItemFg: View by bindView(R.id.list_item_fg)
     }
 }
+
+class MainListDiffUtil(
+    private val oldList: List<MainListModel>,
+    private val newList: List<MainListModel>
+) : DiffUtil.Callback() {
+
+    override fun getOldListSize() = oldList.size
+
+    override fun getNewListSize() = newList.size
+
+    override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
+        oldList[oldItemPosition].id == newList[newItemPosition].id
+
+    override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
+        oldList[oldItemPosition] == newList[newItemPosition]
+}

@@ -18,13 +18,13 @@ class FiltersTabsAdapter(context: Context, private val listener: (Int) -> Unit) 
     private val toggleAnimDuration = context.resources.getInteger(R.integer.toggleAnimDuration).toLong()
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var hasFilters = MutableList(FiltersLayout.numTabs) { false }
+    private var hasFilters = MutableList(5) { false }  //todo
 
     ///////////////////////////////////////////////////////////////////////////
     // Methods
     ///////////////////////////////////////////////////////////////////////////
 
-    override fun getItemCount(): Int = FiltersLayout.numTabs
+    override fun getItemCount(): Int = 5//FiltersLayout.numTabs  //todo
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiltersTabsViewHolder =
             FiltersTabsViewHolder(inflater.inflate(R.layout.item_filter_tab, parent, false))
