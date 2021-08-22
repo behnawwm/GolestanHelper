@@ -1,4 +1,4 @@
-package com.nikhilpanju.fabfilter.filter
+package ir.behnawwm.golestanhelper.filter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.nikhilpanju.fabfilter.R
-import com.nikhilpanju.fabfilter.utils.bindColor
-import com.nikhilpanju.fabfilter.utils.bindOptionalViews
-import com.nikhilpanju.fabfilter.utils.blendColors
-import com.nikhilpanju.fabfilter.utils.getValueAnimator
-import com.nikhilpanju.fabfilter.views.FilterSeekbar
+import ir.behnawwm.golestanhelper.R
+import ir.behnawwm.golestanhelper.utils.bindColor
+import ir.behnawwm.golestanhelper.utils.bindOptionalViews
+import ir.behnawwm.golestanhelper.utils.blendColors
+import ir.behnawwm.golestanhelper.utils.getValueAnimator
+import ir.behnawwm.golestanhelper.views.FilterSeekbar
 
 /**
  * ViewPager adapter to display all the filters

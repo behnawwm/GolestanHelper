@@ -55,7 +55,7 @@
             tools:listitem="@layout/item_list" />
 
 
-        <com.nikhilpanju.fabfilter.filter.FiltersMotionLayout
+        <ir.behnawwm.golestanhelper.filter.FiltersMotionLayout
             android:id="@+id/filters_motion_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

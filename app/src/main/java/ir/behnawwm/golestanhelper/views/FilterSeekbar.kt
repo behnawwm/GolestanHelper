@@ -1,9 +1,9 @@
-package com.nikhilpanju.fabfilter.views
+package ir.behnawwm.golestanhelper.views
 
 import android.content.Context
 import android.util.AttributeSet
 import com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
-import com.nikhilpanju.fabfilter.R
+import ir.behnawwm.golestanhelper.R
 
 class FilterSeekbar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
     : CrystalRangeSeekbar(context, attrs, defStyleAttr) {

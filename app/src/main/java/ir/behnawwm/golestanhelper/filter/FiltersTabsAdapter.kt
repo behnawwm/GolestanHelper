@@ -1,4 +1,4 @@
-package com.nikhilpanju.fabfilter.filter
+package ir.behnawwm.golestanhelper.filter
 
 import android.animation.TimeInterpolator
 import android.content.Context
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.OvershootInterpolator
 import androidx.recyclerview.widget.RecyclerView
-import com.nikhilpanju.fabfilter.R
-import com.nikhilpanju.fabfilter.utils.bindView
-import com.nikhilpanju.fabfilter.utils.setScale
+import ir.behnawwm.golestanhelper.R
+import ir.behnawwm.golestanhelper.utils.bindView
+import ir.behnawwm.golestanhelper.utils.setScale
 
 class FiltersTabsAdapter(context: Context, private val listener: (Int) -> Unit) : RecyclerView.Adapter<FiltersTabsAdapter.FiltersTabsViewHolder>() {
 

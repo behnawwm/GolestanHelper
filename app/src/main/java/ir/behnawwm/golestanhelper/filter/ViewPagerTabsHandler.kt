@@ -1,4 +1,4 @@
-package com.nikhilpanju.fabfilter.filter
+package ir.behnawwm.golestanhelper.filter
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
@@ -8,10 +8,10 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.nikhilpanju.fabfilter.R
-import com.nikhilpanju.fabfilter.utils.*
-import com.nikhilpanju.fabfilter.views.NoScrollHorizontalLayoutManager
-import com.nikhilpanju.fabfilter.views.NoScrollRecyclerView
+import ir.behnawwm.golestanhelper.R
+import ir.behnawwm.golestanhelper.views.NoScrollHorizontalLayoutManager
+import ir.behnawwm.golestanhelper.views.NoScrollRecyclerView
+import ir.behnawwm.golestanhelper.utils.*
 
 /**
  * [FiltersLayout] and [FiltersMotionLayout] both use the same ViewPager2 and tab setup, hence
@@ -22,9 +22,9 @@ import com.nikhilpanju.fabfilter.views.NoScrollRecyclerView
  */
 @SuppressLint("WrongConstant")
 class ViewPagerTabsHandler(
-        private val viewPager: ViewPager2,
-        private val tabsRecyclerView: NoScrollRecyclerView,
-        private val bottomBarCardView: CardView
+    private val viewPager: ViewPager2,
+    private val tabsRecyclerView: NoScrollRecyclerView,
+    private val bottomBarCardView: CardView
 ) {
 
     private val context = viewPager.context

@@ -1,19 +1,21 @@
-package com.nikhilpanju.fabfilter.filter
+package ir.behnawwm.golestanhelper.filter
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.motion.widget.MotionScene
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
-import com.nikhilpanju.fabfilter.R
-import com.nikhilpanju.fabfilter.main.MainActivity
-import com.nikhilpanju.fabfilter.main.MainListAdapter
-import com.nikhilpanju.fabfilter.main.animationPlaybackSpeed
-import com.nikhilpanju.fabfilter.utils.bindView
-import com.nikhilpanju.fabfilter.views.MultiListenerMotionLayout
-import com.nikhilpanju.fabfilter.views.NoScrollRecyclerView
+import ir.behnawwm.golestanhelper.R
+import ir.behnawwm.golestanhelper.databinding.LayoutFilterMotionBinding
+import ir.behnawwm.golestanhelper.main.MainActivity
+import ir.behnawwm.golestanhelper.main.MainListAdapter
+import ir.behnawwm.golestanhelper.main.animationPlaybackSpeed
+import ir.behnawwm.golestanhelper.utils.bindView
+import ir.behnawwm.golestanhelper.views.MultiListenerMotionLayout
+import ir.behnawwm.golestanhelper.views.NoScrollRecyclerView
 import kotlinx.coroutines.launch
 
 /**
@@ -22,23 +24,30 @@ import kotlinx.coroutines.launch
  *
  * Code in this class contains mostly only choreographing the transitions.
  */
-class FiltersMotionLayout @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-    : MultiListenerMotionLayout(context, attrs, defStyleAttr) {
+class FiltersMotionLayout @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) : MultiListenerMotionLayout(context, attrs, defStyleAttr) {
 
-    private val tabsRecyclerView: NoScrollRecyclerView by bindView(R.id.tabs_recycler_view)
-    private val viewPager: ViewPager2 by bindView(R.id.view_pager)
-    private val closeIcon: ImageView by bindView(R.id.close_icon)
-    private val filterIcon: ImageView by bindView(R.id.filter_icon)
-    private val bottomBarCardView: CardView by bindView(R.id.bottom_bar_card_view)
+    private var binding: LayoutFilterMotionBinding =
+        LayoutFilterMotionBinding.inflate(LayoutInflater.from(context), this)
+
+    private val tabsRecyclerView: NoScrollRecyclerView = binding.tabsRecyclerView
+    private val viewPager: ViewPager2 = binding.viewPager
+    private val closeIcon: ImageView = binding.closeIcon
+    private val filterIcon: ImageView = binding.filterIcon
+    private val bottomBarCardView: CardView = binding.bottomBarCardView
 
     /** Store all the transition durations to be able to update them dynamically later */
-    private val durationsMap: Map<MotionScene.Transition, Int> = definedTransitions.associateWith { it.duration }
+    private val durationsMap: Map<MotionScene.Transition, Int> =
+        definedTransitions.associateWith { it.duration }
     private val tabsHandler: ViewPagerTabsHandler by lazy {
         ViewPagerTabsHandler(viewPager, tabsRecyclerView, bottomBarCardView)
     }
 
     init {
-        inflate(context, R.layout.layout_filter_motion, this)
+//        inflate(context, R.layout.layout_filter_motion, this)
         tabsHandler.init()
         updateDurations()
         enableClicks()
@@ -224,8 +233,8 @@ class FiltersMotionLayout @JvmOverloads constructor(context: Context, attrs: Att
      * The duration of the scale down animation will match that of the current transition.
      */
     private fun startScaleDownAnimator(isScaledDown: Boolean): Unit =
-            (context as MainActivity)
-                    .getAdapterScaleDownAnimator(isScaledDown)
-                    .apply { duration = transitionTimeMs }
-                    .start()
+        (context as MainActivity)
+            .getAdapterScaleDownAnimator(isScaledDown)
+            .apply { duration = transitionTimeMs }
+            .start()
 }

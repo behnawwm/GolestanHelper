@@ -1,4 +1,4 @@
-package com.nikhilpanju.fabfilter.main
+package ir.behnawwm.golestanhelper.main
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -14,8 +14,8 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.nikhilpanju.fabfilter.R
-import com.nikhilpanju.fabfilter.utils.*
+import ir.behnawwm.golestanhelper.R
+import ir.behnawwm.golestanhelper.utils.*
 
 /** List Model. A sample model that only contains id */
 data class MainListModel(val id: Int)

@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.nikhilpanju.fabfilter.views.CircleCardView
+    <ir.behnawwm.golestanhelper.views.CircleCardView
         android:id="@+id/fab"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
@@ -69,7 +69,7 @@
         app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder"
         app:layout_constraintTop_toTopOf="@id/filter_sheet_placeholder" />
 
-    <com.nikhilpanju.fabfilter.views.NoScrollRecyclerView
+    <ir.behnawwm.golestanhelper.views.NoScrollRecyclerView
         android:id="@+id/tabs_recycler_view"
         android:layout_width="0dp"
         android:layout_height="@dimen/tabs_height"
