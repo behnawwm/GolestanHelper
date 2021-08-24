@@ -63,7 +63,7 @@ class MainListAdapter(context: Context) : RecyclerView.Adapter<MainListAdapter.L
     override fun getItemCount(): Int = adapterList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder =
-            ListViewHolder(inflater.inflate(R.layout.item_list, parent, false))
+            ListViewHolder(inflater.inflate(R.layout.item_list2, parent, false))
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)

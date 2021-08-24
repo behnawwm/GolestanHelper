@@ -34,7 +34,7 @@ too. layout_gravity="center_horizontal" is a lot simpler.
             scale_container scales the inside views to make it look natural
             -->
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/scale_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -48,63 +48,42 @@ too. layout_gravity="center_horizontal" is a lot simpler.
                     android:id="@+id/chevron"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/title"
-                    android:layout_alignBottom="@+id/subtitle1"
-                    android:layout_marginEnd="16dp"
                     android:tint="@color/title_color"
-                    app:srcCompat="@drawable/ic_chevron_right" />
+                    app:layout_constraintBottom_toBottomOf="@+id/subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_chevron_left" />
 
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_toEndOf="@id/chevron"
-                    android:background="@drawable/ic_pill"
-                    android:backgroundTint="@color/title_color"
-                    android:padding="8dp"
                     android:text="ثبت نام مقدماتی"
                     android:textColor="@android:color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/chevron"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/subtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/title"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@id/chevron"
-                    android:background="@drawable/ic_pill"
-                    android:backgroundTint="@color/subtitle_color"
-                    android:padding="8dp"
-                    android:text="گزارش 78" />
-
-                <TextView
-                    android:id="@+id/subtitle2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/title"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_toEndOf="@id/subtitle1"
-                    android:background="@drawable/ic_pill"
-                    android:visibility="gone"
-                    android:backgroundTint="@color/subtitle_color"
-                    android:padding="8dp"
-                    android:text="نحوه ثبت نام مقدماتی" />
+                    android:text="گزارش 78"
+                    app:layout_constraintEnd_toStartOf="@+id/chevron"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
 
                 <LinearLayout
                     android:id="@+id/expand_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/subtitle2"
-                    android:layout_alignStart="@id/title"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:orientation="vertical"
                     android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/subtitle1"
                     tools:visibility="visible">
 
                     <LinearLayout
@@ -244,7 +223,7 @@ too. layout_gravity="center_horizontal" is a lot simpler.
                             android:backgroundTint="@color/subtitle_color" />
                     </LinearLayout>
                 </LinearLayout>
-            </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/list_item_fg"
