@@ -28,4 +28,7 @@
 
     <color name="tab_unselected_color">#356E8C</color>
     <color name="tab_selected_color">@android:color/white</color>
+
+    <color name="blue_f">#3880FF</color>
+    <color name="white">#FFFFFF</color>
 </resources>

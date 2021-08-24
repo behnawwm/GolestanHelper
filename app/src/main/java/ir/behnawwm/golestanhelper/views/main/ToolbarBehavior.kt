@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.main
+package ir.behnawwm.golestanhelper.views.main
 
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout

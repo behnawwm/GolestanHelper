@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.main
+package ir.behnawwm.golestanhelper.views.main
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
@@ -18,9 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.snackbar.Snackbar
-import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.databinding.ActivityMainBinding
-import ir.behnawwm.golestanhelper.utils.bindView
 
 
 var animationPlaybackSpeed: Double = 0.8

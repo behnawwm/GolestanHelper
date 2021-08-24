@@ -24,7 +24,9 @@
       <map>
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_chevron_left.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_chevron_right.xml" value="0.31576576576576576" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/font/annie_use_your_telescope.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/activity_test.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/filter_layout_1.xml" value="0.338768115942029" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/filter_layout_2.xml" value="0.30180180180180183" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_filter_tab.xml" value="0.338768115942029" />
@@ -32,6 +34,8 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_list2.xml" value="0.2" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/layout_filter.xml" value="0.338768115942029" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/layout_filter_motion.xml" value="0.16" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/nav_drawer.xml" value="0.30180180180180183" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/menu/tabs.xml" value="0.30180180180180183" />
       </map>
     </option>
   </component>

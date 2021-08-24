@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.filter
+package ir.behnawwm.golestanhelper.views.filter
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
@@ -9,8 +9,8 @@ import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import ir.behnawwm.golestanhelper.R
-import ir.behnawwm.golestanhelper.views.NoScrollHorizontalLayoutManager
-import ir.behnawwm.golestanhelper.views.NoScrollRecyclerView
+import ir.behnawwm.golestanhelper.views.helperview.NoScrollHorizontalLayoutManager
+import ir.behnawwm.golestanhelper.views.helperview.NoScrollRecyclerView
 import ir.behnawwm.golestanhelper.utils.*
 
 /**

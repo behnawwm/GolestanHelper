@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.views
+package ir.behnawwm.golestanhelper.views.helperview
 
 import android.content.Context
 import android.util.AttributeSet
@@ -92,12 +92,13 @@ open class MultiListenerMotionLayout @JvmOverloads constructor(context: Context,
         }
     }
 
-    fun addTransitionListener(listener: TransitionListener) {
+    override fun addTransitionListener(listener: TransitionListener) {   //todo check changed
         listeners.addIfAbsent(listener)
     }
 
-    fun removeTransitionListener(listener: TransitionListener) {
+    override fun removeTransitionListener(listener: TransitionListener): Boolean {  //todo check changed
         listeners.remove(listener)
+        return true
     }
 
     @Deprecated(message = "Use addTransitionListener instead", replaceWith = ReplaceWith(

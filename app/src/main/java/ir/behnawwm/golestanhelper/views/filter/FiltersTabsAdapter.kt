@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.filter
+package ir.behnawwm.golestanhelper.views.filter
 
 import android.animation.TimeInterpolator
 import android.content.Context

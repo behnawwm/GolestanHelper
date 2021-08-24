@@ -137,7 +137,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/E:/Downloads/Compressed/Sdk/Sdk/Sdk/icons/material/materialicons/chevron_left/baseline_chevron_left_24.xml" />
+                                      <entry key="url" value="file:/E:/Downloads/Compressed/Sdk/Sdk/Sdk/icons/material/materialicons/dehaze/baseline_dehaze_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -147,8 +147,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_chevron_left" />
-                            <entry key="sourceFile" value="C:\Users\LAPTOP\Desktop\chevron-right.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_learn" />
+                            <entry key="sourceFile" value="C:\Users\Lenovo\Downloads\learn.svg" />
                           </map>
                         </option>
                       </PersistentState>

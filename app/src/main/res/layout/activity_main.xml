@@ -32,8 +32,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:padding="16dp"
-                    android:tint="@color/toolbar_title_color"
-                    app:srcCompat="@drawable/ic_drawer_icon" />
+                    app:srcCompat="@drawable/ic_drawer_icon"
+                    app:tint="@color/toolbar_title_color" />
 
                 <View
                     android:id="@+id/toolbar_title"
@@ -55,7 +55,7 @@
             tools:listitem="@layout/item_list" />
 
 
-        <ir.behnawwm.golestanhelper.filter.FiltersMotionLayout
+        <ir.behnawwm.golestanhelper.views.filter.FiltersMotionLayout
             android:id="@+id/filters_motion_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -19,7 +19,7 @@
         android:tint="@color/filter_pill_color"
         app:srcCompat="@drawable/ic_pill" />
 
-    <ir.behnawwm.golestanhelper.views.FilterSeekbar
+    <ir.behnawwm.golestanhelper.views.helperview.FilterSeekbar
         android:id="@+id/rangeSeekbar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
         android:tint="@color/filter_pill_color"
         app:srcCompat="@drawable/ic_pill" />
 
-    <ir.behnawwm.golestanhelper.views.FilterSeekbar
+    <ir.behnawwm.golestanhelper.views.helperview.FilterSeekbar
         android:id="@+id/rangeSeekbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

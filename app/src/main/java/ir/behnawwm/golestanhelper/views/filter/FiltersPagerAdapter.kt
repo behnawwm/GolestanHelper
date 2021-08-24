@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.filter
+package ir.behnawwm.golestanhelper.views.filter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -12,7 +12,7 @@ import ir.behnawwm.golestanhelper.utils.bindColor
 import ir.behnawwm.golestanhelper.utils.bindOptionalViews
 import ir.behnawwm.golestanhelper.utils.blendColors
 import ir.behnawwm.golestanhelper.utils.getValueAnimator
-import ir.behnawwm.golestanhelper.views.FilterSeekbar
+import ir.behnawwm.golestanhelper.views.helperview.FilterSeekbar
 
 /**
  * ViewPager adapter to display all the filters

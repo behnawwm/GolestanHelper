@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.filter
+package ir.behnawwm.golestanhelper.views.filter
 
 import android.content.Context
 import android.util.AttributeSet
@@ -10,12 +10,11 @@ import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.databinding.LayoutFilterMotionBinding
-import ir.behnawwm.golestanhelper.main.MainActivity
-import ir.behnawwm.golestanhelper.main.MainListAdapter
-import ir.behnawwm.golestanhelper.main.animationPlaybackSpeed
-import ir.behnawwm.golestanhelper.utils.bindView
-import ir.behnawwm.golestanhelper.views.MultiListenerMotionLayout
-import ir.behnawwm.golestanhelper.views.NoScrollRecyclerView
+import ir.behnawwm.golestanhelper.views.main.MainActivity
+import ir.behnawwm.golestanhelper.views.main.MainListAdapter
+import ir.behnawwm.golestanhelper.views.main.animationPlaybackSpeed
+import ir.behnawwm.golestanhelper.views.helperview.MultiListenerMotionLayout
+import ir.behnawwm.golestanhelper.views.helperview.NoScrollRecyclerView
 import kotlinx.coroutines.launch
 
 /**
