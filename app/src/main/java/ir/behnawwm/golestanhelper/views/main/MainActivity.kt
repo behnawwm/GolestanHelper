@@ -20,6 +20,11 @@ import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.snackbar.Snackbar
 import ir.behnawwm.golestanhelper.databinding.ActivityMainBinding
 
+import androidx.core.content.ContextCompat
+
+import androidx.recyclerview.widget.DividerItemDecoration
+import ir.behnawwm.golestanhelper.R
+
 
 var animationPlaybackSpeed: Double = 0.8
 
@@ -34,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var drawerIcon: View
     lateinit var drawerLayout: DrawerLayout
 
-//    private val loadingDuration: Long
+    //    private val loadingDuration: Long
 //        get() = (resources.getInteger(R.integer.loadingAnimDuration) / animationPlaybackSpeed).toLong()
     private var pressedTime: Long = 0
 
@@ -70,27 +75,40 @@ class MainActivity : AppCompatActivity() {
         //init
         recyclerView = binding.recyclerView
         appbar = binding.appbar
-        drawerIcon = binding.drawerIcon
-        drawerLayout = binding.drawerLayout
+//        drawerIcon = binding.drawerIcon
+//        drawerLayout = binding.drawerLayout
 
         // Appbar behavior init
-        (appbar.layoutParams as CoordinatorLayout.LayoutParams).behavior = ToolbarBehavior()
+//        (appbar.layoutParams as CoordinatorLayout.LayoutParams).behavior = ToolbarBehavior()
 
         // RecyclerView Init
         mainListAdapter = MainListAdapter(this)
         recyclerView.adapter = mainListAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
+        val divider = DividerItemDecoration(
+            baseContext,
+            DividerItemDecoration.VERTICAL
+        )
+
+        divider.setDrawable(
+            ContextCompat.getDrawable(
+                baseContext,
+                R.drawable.horizontal_divier
+            )!!
+        )
+        recyclerView.addItemDecoration(divider)
         recyclerView.setHasFixedSize(true)
 //        updateRecyclerViewAnimDuration()
 
         // Nav Drawer Init
-        drawerIcon.setOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
+//        drawerIcon.setOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
 
-        // Open Nav Drawer when opening app for the first time
-        if (isFirstTime) {
-            drawerLayout.openDrawer(GravityCompat.START)
-            isFirstTime = false
-        }
+       // Open Nav Drawer when opening app for the first time
+//        if (isFirstTime) {
+//            drawerLayout.openDrawer(GravityCompat.START)
+//            isFirstTime = false
+//        }
+
     }
 
 

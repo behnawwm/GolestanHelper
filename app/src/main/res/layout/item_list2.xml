@@ -11,58 +11,44 @@ too. layout_gravity="center_horizontal" is a lot simpler.
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
         android:orientation="vertical"
-        app:cardBackgroundColor="@color/list_item_bg_collapsed"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="6dp"
         app:cardElevation="0dp"
-        app:cardMaxElevation="0dp"
-        tools:layout_marginLeft="20dp"
-        tools:layout_marginRight="20dp">
+        app:cardMaxElevation="0dp">
 
         <FrameLayout
             android:id="@+id/card_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--
-            scale_container is used to scale down the item when the scale down
-            animation happens. card_container re-sizes height and width while
-            scale_container scales the inside views to make it look natural
-            -->
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/scale_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="@dimen/list_item_horizontal_padding"
-                android:paddingTop="@dimen/list_item_vertical_padding"
-                android:paddingRight="@dimen/list_item_horizontal_padding"
-                android:paddingBottom="@dimen/list_item_vertical_padding"
                 android:transformPivotX="0dp">
 
                 <ImageView
                     android:id="@+id/chevron"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:tint="@color/title_color"
                     app:layout_constraintBottom_toBottomOf="@+id/subtitle1"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_chevron_left" />
+                    app:srcCompat="@drawable/ic_chevron_left"
+                    app:tint="@color/black" />
 
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
                     android:text="ثبت نام مقدماتی"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/chevron"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -70,169 +56,33 @@ too. layout_gravity="center_horizontal" is a lot simpler.
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
                     android:text="گزارش 78"
-                    app:layout_constraintEnd_toStartOf="@+id/chevron"
+                    android:textColor="#666666"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/title" />
 
-                <LinearLayout
-                    android:id="@+id/expand_view"
-                    android:layout_width="match_parent"
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:orientation="vertical"
-                    android:visibility="gone"
-                    app:layout_constraintTop_toBottomOf="@id/subtitle1"
-                    tools:visibility="visible">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chevron">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#E7F7F7"
-                        android:orientation="horizontal"
-                        android:padding="14dp">
+                        android:backgroundTint="@color/blue_f"
+                        android:text="#آموزش" />
 
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/title_color"
-                            android:transformPivotX="0dp" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.8" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1.5"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/subtitle_color" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#0000"
-                        android:orientation="horizontal"
-                        android:padding="14dp">
+                        android:backgroundTint="@color/blue_f"
+                        android:text="#معدل" />
 
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/title_color" />
+                </com.google.android.material.chip.ChipGroup>
 
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.8" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1.5"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/subtitle_color" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#E7F7F7"
-                        android:orientation="horizontal"
-                        android:padding="14dp">
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/title_color" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.8" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1.5"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/subtitle_color" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#0000"
-                        android:orientation="horizontal"
-                        android:padding="14dp">
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/title_color" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.8" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1.5"
-                            android:background="@drawable/ic_pill"
-                            android:backgroundTint="@color/subtitle_color" />
-                    </LinearLayout>
-                </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <View
-                android:id="@+id/list_item_fg"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="0"
-                android:background="@color/list_item_fg"
-                android:visibility="visible"
-                tools:visibility="gone" />
         </FrameLayout>
     </androidx.cardview.widget.CardView>
 </FrameLayout>

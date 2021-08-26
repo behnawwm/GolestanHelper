@@ -7,30 +7,6 @@
     android:background="@color/white"
     tools:context=".views.test.TestActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#C8C1C1"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <nl.joery.animatedbottombar.AnimatedBottomBar
-        android:id="@+id/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFF"
-        app:abb_indicatorAppearance="round"
-        app:abb_indicatorColor="@color/blue_f"
-        app:abb_indicatorHeight="4dp"
-        app:abb_indicatorLocation="bottom"
-        app:abb_indicatorMargin="16dp"
-        app:abb_selectedIndex="0"
-        app:abb_selectedTabType="text"
-        app:abb_tabColor="#757575"
-        app:abb_tabColorSelected="@color/blue_f"
-        app:abb_tabs="@menu/tabs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

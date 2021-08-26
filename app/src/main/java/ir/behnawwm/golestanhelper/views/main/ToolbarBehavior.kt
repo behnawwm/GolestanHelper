@@ -27,9 +27,9 @@ class ToolbarBehavior : CoordinatorLayout.Behavior<AppBarLayout>() {
         if (viewsSet) return
         viewsSet = true
 
-        toolbar = child.findViewById(R.id.appbar_container)
-        toolbarTitle = toolbar.findViewById(R.id.toolbar_title)
-        drawerIcon = toolbar.findViewById(R.id.drawer_icon)
+//        toolbar = child.findViewById(R.id.appbar_container)
+//        toolbarTitle = toolbar.findViewById(R.id.toolbar_title)
+//        drawerIcon = toolbar.findViewById(R.id.drawer_icon)
 
         toolbarOriginalHeight = toolbar.layoutParams.height.toFloat()
         toolbarCollapsedHeight = toolbarOriginalHeight * minScale

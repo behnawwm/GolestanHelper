@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,18 +37,18 @@
         android:id="@+id/fab"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardBackgroundColor="@color/blue_f"
         app:cardCornerRadius="@dimen/fab_radius"
         app:cardElevation="@dimen/fab_elevation" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/filter_icon"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
         android:elevation="34dp"
         android:outlineProvider="none"
         android:scaleType="centerInside"
-        android:tint="@color/filter_icon_color"
+        app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/fab"
         app:layout_constraintEnd_toEndOf="@id/fab"
         app:layout_constraintStart_toStartOf="@id/fab"
@@ -105,7 +104,7 @@
         android:elevation="34dp"
         android:outlineProvider="none"
         android:scaleType="centerInside"
-        android:tint="#FFF"
+        app:tint="#FFF"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/bottom_bar_card_view"
         app:layout_constraintTop_toTopOf="@id/bottom_bar_card_view"

@@ -10,8 +10,7 @@ There are 9 transitions, 1 between every 2 consecutive sets.
 For ex: 1 -> 2, 2 -> 3 ... 9 -> 10.
 -->
 
-<MotionScene
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- ////////////////////////////////////////////////////////////////////////////////-->
@@ -30,7 +29,7 @@ For ex: 1 -> 2, 2 -> 3 ... 9 -> 10.
                 android:layout_width="@dimen/fab_size"
                 android:layout_height="@dimen/fab_size"
                 android:layout_marginEnd="@dimen/fab_margin"
-                android:layout_marginBottom="@dimen/fab_margin"
+                android:layout_marginBottom="80dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

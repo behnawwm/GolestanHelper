@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Golestan Helper</string>
+    <string name="search_hint">عبارت مورد نظر خود را تایپ کنید</string>
 </resources>

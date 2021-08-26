@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_size">72dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
     <dimen name="fab_size_inset">56dp</dimen>
     <dimen name="fab_radius">36dp</dimen>
     <dimen name="fab_radius_inset">28dp</dimen>
-    <dimen name="fab_margin">32dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
     <dimen name="fab_margin_inset">40dp</dimen>
 
     <dimen name="fab_elevation">16dp</dimen>
