@@ -10,7 +10,7 @@
         <item name="android:windowBackground">@color/white</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="fontFamily">@font/vazir</item>
+<!--        <item name="fontFamily">@font/vazir</item>-->
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar" />

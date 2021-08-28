@@ -5,8 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:backgroundTint="@color/blue_f"
     tools:context=".views.test.TestActivity">
 
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:listitem="@layout/icon_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
