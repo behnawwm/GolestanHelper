@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:text="جست و جو سریع"
+                android:text="جستجو سریع"
                 android:textColor="@color/black" />
 
             <Button
@@ -62,30 +62,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_et_search"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:theme="@style/AppTheme.AppBarOverlay.Light"
-            app:boxStrokeColor="@color/black"
-            app:startIconDrawable="@drawable/ic_search">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/search_hint" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/layout_et_search"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:listitem="@layout/item_list2" />
+            android:layout_above="@id/bottom_bar"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
 
         <View
             android:layout_width="match_parent"

@@ -10,7 +10,7 @@
         <item name="android:windowBackground">@color/white</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-<!--        <item name="fontFamily">@font/vazir</item>-->
+        <item name="fontFamily">@font/vazir</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar" />
@@ -20,5 +20,12 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
         <item name="android:colorBackground">@color/blue_f</item>
         <item name="android:textColor">#FFF</item>
+    </style>
+
+
+    <!--    chip   -->
+    <style name="boldChipText" parent="TextAppearance.MaterialComponents.Chip">
+        <!--        <item name="android:textStyle">bold</item>-->
+        <item name="android:fontFamily">@font/vazir_bold</item>
     </style>
 </resources>

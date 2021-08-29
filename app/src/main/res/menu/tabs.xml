@@ -2,7 +2,7 @@
     <item
         android:id="@+id/tab_home"
         android:icon="@drawable/ic_search"
-        android:title="جست و جو" />
+        android:title="جستجو" />
     <item
         android:id="@+id/tab_alarm"
         android:icon="@drawable/ic_learn"

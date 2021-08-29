@@ -21,9 +21,14 @@ import com.google.android.material.snackbar.Snackbar
 import ir.behnawwm.golestanhelper.databinding.ActivityMainBinding
 
 import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.mikepenz.fastadapter.FastAdapter
+import com.mikepenz.fastadapter.adapters.ItemAdapter
 import ir.behnawwm.golestanhelper.R
+import nl.joery.animatedbottombar.AnimatedBottomBar
 
 
 var animationPlaybackSpeed: Double = 0.8
@@ -34,18 +39,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mainListAdapter: MainListAdapter
 
-    lateinit var recyclerView: RecyclerView
-    lateinit var appbar: AppBarLayout
-    lateinit var drawerIcon: View
-    lateinit var drawerLayout: DrawerLayout
-
-    //    private val loadingDuration: Long
-//        get() = (resources.getInteger(R.integer.loadingAnimDuration) / animationPlaybackSpeed).toLong()
     private var pressedTime: Long = 0
 
-    /**
-     * Used to open nav drawer when opening app for first time (to show options)
-     */
+
     private val prefs: SharedPreferences
         get() = getSharedPreferences("FabFilter", Context.MODE_PRIVATE)
     private var isFirstTime: Boolean
@@ -72,56 +68,41 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //init
-        recyclerView = binding.recyclerView
-        appbar = binding.appbar
-//        drawerIcon = binding.drawerIcon
-//        drawerLayout = binding.drawerLayout
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
+        val navController = navHostFragment.navController
 
-        // Appbar behavior init
-//        (appbar.layoutParams as CoordinatorLayout.LayoutParams).behavior = ToolbarBehavior()
+        binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
+            override fun onTabSelected(
+                lastIndex: Int,
+                lastTab: AnimatedBottomBar.Tab?,
+                newIndex: Int,
+                newTab: AnimatedBottomBar.Tab
+            ) {
+                when (newIndex) {
+                    0 -> navController.navigate(R.id.action_global_searchFragment)
+                    1 -> {
+                        if (newIndex > lastIndex) {
+                            navController.navigate(R.id.action_global_gudieFragment_from_left)
+                        } else {
+                            navController.navigate(R.id.action_global_gudieFragment_from_right)
+                        }
+                    }
+                    2 -> navController.navigate(R.id.action_global_categoryFragment)
 
-        // RecyclerView Init
-        mainListAdapter = MainListAdapter(this)
-        recyclerView.adapter = mainListAdapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        val divider = DividerItemDecoration(
-            baseContext,
-            DividerItemDecoration.VERTICAL
-        )
+                }
+            }
 
-        divider.setDrawable(
-            ContextCompat.getDrawable(
-                baseContext,
-                R.drawable.horizontal_divier
-            )!!
-        )
-        recyclerView.addItemDecoration(divider)
-        recyclerView.setHasFixedSize(true)
-//        updateRecyclerViewAnimDuration()
-
-        // Nav Drawer Init
-//        drawerIcon.setOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
-
-       // Open Nav Drawer when opening app for the first time
+//            // An optional method that will be fired whenever an already selected tab has been selected again.
+//            override fun onTabReselected(index: Int, tab: AnimatedBottomBar.Tab) {
+//                Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
+//            }
+        })
 //        if (isFirstTime) {
-//            drawerLayout.openDrawer(GravityCompat.START)
 //            isFirstTime = false
 //        }
 
     }
-
-
-//    private fun updateRecyclerViewAnimDuration() = recyclerView.itemAnimator?.run {
-//        removeDuration = loadingDuration * 60 / 100
-//        addDuration = loadingDuration
-//    }
-
-    /**
-     * Open browser for given string resId URL
-     */
-    private fun openBrowser(@StringRes resId: Int): Unit =
-        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(resId))))
 
     /**
      * Called from FiltersLayout to get adapter scale down animator
@@ -134,7 +115,10 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed();
             finish();
         } else {
-            Snackbar.make(binding.root, "Press back again to exit", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, "Press back again to exit", Snackbar.LENGTH_SHORT)
+                .setBackgroundTint(resources.getColor(R.color.black_normal))
+                .setTextColor(resources.getColor(R.color.white))
+                .show()
         }
         pressedTime = System.currentTimeMillis();
     }
