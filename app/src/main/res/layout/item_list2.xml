@@ -8,7 +8,11 @@ too. layout_gravity="center_horizontal" is a lot simpler.
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="8dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -35,11 +39,11 @@ too. layout_gravity="center_horizontal" is a lot simpler.
                     android:id="@+id/chevron"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/subtitle1"
+                    app:layout_constraintBottom_toBottomOf="@+id/title"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_chevron_left"
-                    app:tint="@color/black" />
+                    app:tint="@color/black_normal" />
 
                 <TextView
                     android:id="@+id/title"
@@ -47,6 +51,7 @@ too. layout_gravity="center_horizontal" is a lot simpler.
                     android:layout_height="wrap_content"
                     android:text="ثبت نام مقدماتی"
                     android:textColor="@android:color/black"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -55,30 +60,45 @@ too. layout_gravity="center_horizontal" is a lot simpler.
                     android:id="@+id/subtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:text="گزارش 78"
-                    android:textColor="#666666"
+                    android:textColor="@color/black_normal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/title" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/chevron">
 
                     <com.google.android.material.chip.Chip
+                        android:id="@+id/chip1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/blue_f"
-                        android:text="#آموزش" />
+                        android:text="#آموزش"
+                        android:textAppearance="@style/boldChipText"
+                        android:textSize="13sp"
+                        app:chipCornerRadius="6dp"
+                        app:chipEndPadding="8dp"
+                        app:chipStartPadding="8dp"
+                        app:ensureMinTouchTargetSize="false" />
 
                     <com.google.android.material.chip.Chip
+                        android:id="@+id/chip2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/blue_f"
-                        android:text="#معدل" />
+                        android:text="#معدل"
+                        android:textAppearance="@style/boldChipText"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:chipCornerRadius="6dp"
+                        app:chipEndPadding="8dp"
+                        app:chipStartPadding="8dp"
+                        app:ensureMinTouchTargetSize="false" />
 
                 </com.google.android.material.chip.ChipGroup>
 

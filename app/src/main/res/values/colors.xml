@@ -32,4 +32,6 @@
     <color name="blue_f">#3880FF</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="black_normal">#666666</color>
+    <color name="gray">#BFBFBF</color>
 </resources>

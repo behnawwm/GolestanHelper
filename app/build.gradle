@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 30
@@ -97,6 +98,12 @@ dependencies {
     kapt "androidx.room:room-compiler:2.3.0"
     annotationProcessor "androidx.room:room-compiler:2.3.0"
     implementation "androidx.room:room-ktx:2.3.0"
+
+    //Navigation Component
+    def nav_version = "2.3.5"
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
 
     // Coroutines
