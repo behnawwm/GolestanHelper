@@ -118,7 +118,7 @@ dependencies {
     implementation 'nl.joery.animatedbottombar:library:1.1.0'
 
 
-    //todo fastAdapter
+    // fastAdapter
     def latestFastAdapterRelease = '5.4.1'
 
     implementation "com.mikepenz:fastadapter:${latestFastAdapterRelease}"
@@ -131,5 +131,9 @@ dependencies {
     implementation "com.mikepenz:fastadapter-extensions-swipe:${latestFastAdapterRelease}" // swipe support
     implementation "com.mikepenz:fastadapter-extensions-ui:${latestFastAdapterRelease}" // pre-defined ui components
     implementation "com.mikepenz:fastadapter-extensions-utils:${latestFastAdapterRelease}" // needs the `expandable`, `drag` and `scroll` extension.
+
+
+    //Expandable layout
+    implementation "com.github.skydoves:expandablelayout:1.0.7"
 
 }

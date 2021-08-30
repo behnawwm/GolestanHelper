@@ -96,11 +96,11 @@
             app:abb_tabs="@menu/tabs" />
     </RelativeLayout>
 
-    <ir.behnawwm.golestanhelper.views.filter.FiltersMotionLayout
-        android:id="@+id/filters_motion_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutDescription="@xml/scene_filter" />
+<!--    <ir.behnawwm.golestanhelper.views.filter.FiltersMotionLayout-->
+<!--        android:id="@+id/filters_motion_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layoutDescription="@xml/scene_filter" />-->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

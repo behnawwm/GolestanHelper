@@ -5,4 +5,10 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_guide"
+        android:layout_marginBottom="8dp"/>
 </RelativeLayout>

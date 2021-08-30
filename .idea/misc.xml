@@ -22,6 +22,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lenovo/.gradle/caches/transforms-3/2953128bbd7a2a25969f153afc955bde/transformed/jetified-expandablelayout-1.0.7/res/drawable/ic_arrow_down.xml" value="0.31576576576576576" />
+        <entry key="..\:/Users/Lenovo/.gradle/caches/transforms-3/4ba799d87a773a26ab8809e12262a7a6/transformed/jetified-library-1.1.0/res/layout/list_tab.xml" value="0.30180180180180183" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/bg_border_round.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/horizontal_divier.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_bookmark.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_chevron_left.xml" value="0.31576576576576576" />
@@ -40,9 +43,12 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/fragment_guide.xml" value="0.30180180180180183" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/fragment_search.xml" value="0.30180180180180183" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/icon_item.xml" value="0.30180180180180183" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_child_guide.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_filter_tab.xml" value="0.338768115942029" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_guide.xml" value="0.30180180180180183" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_list.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_list2.xml" value="0.33" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/item_parent_guide.xml" value="0.30180180180180183" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/layout_filter.xml" value="0.338768115942029" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/layout_filter_motion.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/nav_drawer.xml" value="0.30180180180180183" />

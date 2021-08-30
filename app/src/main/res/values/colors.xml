@@ -34,4 +34,5 @@
     <color name="black">#000000</color>
     <color name="black_normal">#666666</color>
     <color name="gray">#BFBFBF</color>
+    <color name="gray_border">#C4C4C4</color>
 </resources>

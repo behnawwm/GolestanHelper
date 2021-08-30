@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_category" />
     <fragment
         android:id="@+id/gudieFragment"
-        android:name="ir.behnawwm.golestanhelper.views.main.fragments.guide.GudieFragment"
+        android:name="ir.behnawwm.golestanhelper.views.main.fragments.guide.GuideFragment"
         android:label="GudieFragment"
         tools:layout="@layout/fragment_guide" />
     <action
