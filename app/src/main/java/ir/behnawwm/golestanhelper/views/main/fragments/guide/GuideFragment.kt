@@ -25,6 +25,7 @@ class GuideFragment : Fragment(R.layout.fragment_guide) {
     ): View {
         binding = FragmentGuideBinding.inflate(inflater)
 
+
         binding.apply {
             val items = listOf(
                 GuideListItem(
@@ -53,13 +54,13 @@ class GuideFragment : Fragment(R.layout.fragment_guide) {
                     null
                 ),
                 GuideListItem(
-                    "ثبت نام مقدماتی",
+                    "ثبت ی",
                     resources.getString(R.string.sample_guide_desc),
                     null
                 ),
                 GuideListItem(
                     "ثبت نام مقدماتی",
-                    resources.getString(R.string.sample_guide_desc),
+                    "تست",
                     null
                 ),
 

@@ -1,7 +1,9 @@
 package ir.behnawwm.golestanhelper.views.main.fragments.guide
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import com.mikepenz.fastadapter.binding.AbstractBindingItem
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.databinding.ItemGuideBinding
@@ -22,6 +24,8 @@ class GuideListItem(val title: String?, val description: String?, val downloadUr
             else
                 expandable.expand()
         }
+        expandable.parentLayout.findViewById<TextView>(R.id.tv_title).text = title
+        expandable.secondLayout.findViewById<TextView>(R.id.tv_desc).text = description
 
     }
 

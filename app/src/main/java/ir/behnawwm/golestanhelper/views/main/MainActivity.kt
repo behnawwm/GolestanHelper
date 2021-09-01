@@ -28,6 +28,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import ir.behnawwm.golestanhelper.R
+import ir.behnawwm.golestanhelper.utils.hideKeyboard
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 
@@ -80,28 +81,43 @@ class MainActivity : AppCompatActivity() {
                 newTab: AnimatedBottomBar.Tab
             ) {
                 when (newIndex) {
-                    0 -> navController.navigate(R.id.action_global_searchFragment)
+                    0 -> {
+                        navController.navigate(R.id.action_global_searchFragment)
+                        binding.toolbarTitle.text = "جستجو سریع"
+                    }
                     1 -> {
                         if (newIndex > lastIndex) {
                             navController.navigate(R.id.action_global_gudieFragment_from_left)
                         } else {
                             navController.navigate(R.id.action_global_gudieFragment_from_right)
                         }
+                        binding.toolbarTitle.text = "راهنمای آموزشی"
                     }
-                    2 -> navController.navigate(R.id.action_global_categoryFragment)
+                    2 -> {
+                        navController.navigate(R.id.action_global_categoryFragment)
+                        binding.toolbarTitle.text = "دسته بندی های جامع گلستان"
+                    }
 
+                    else -> {
+                    }
+                }.also {
+                    hideKeyboard()
                 }
             }
-
 //            // An optional method that will be fired whenever an already selected tab has been selected again.
 //            override fun onTabReselected(index: Int, tab: AnimatedBottomBar.Tab) {
 //                Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
 //            }
         })
+        binding.btnBookmark.setOnClickListener {
+
+        }
+        binding.btnPerson.setOnClickListener {
+
+        }
 //        if (isFirstTime) {
 //            isFirstTime = false
 //        }
-
     }
 
     /**

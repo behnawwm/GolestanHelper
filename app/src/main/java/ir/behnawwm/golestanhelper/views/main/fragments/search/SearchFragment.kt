@@ -24,6 +24,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     ): View {
         binding = FragmentSearchBinding.inflate(inflater)
 
+
         binding.apply {
             val items = listOf(
                 SearchListItem("شسیسیسشی"),
@@ -31,7 +32,6 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                 SearchListItem("ظطزی"),
                 SearchListItem("لبعتلب"),
                 SearchListItem("قثدذرز"),
-
                 )
             val itemAdapter = ItemAdapter<SearchListItem>()
             itemAdapter.add(items)

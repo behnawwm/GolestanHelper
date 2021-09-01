@@ -9,6 +9,9 @@ import android.graphics.Point
 import android.util.TypedValue
 import android.view.View
 import android.view.WindowManager
+import android.app.Activity
+import android.view.inputmethod.InputMethodManager
+
 
 inline fun getValueAnimator(
         forward: Boolean = true,
@@ -50,4 +53,13 @@ inline val View.screenWidth: Int
 fun View.setScale(scale: Float) {
     this.scaleX = scale
     this.scaleY = scale
+}
+fun Activity.hideKeyboard() {
+    val imm: InputMethodManager =
+        this.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    var view = this.currentFocus
+    if (view == null) {
+        view = View(this)
+    }
+    imm.hideSoftInputFromWindow(view.windowToken, 0)
 }

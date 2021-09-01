@@ -136,4 +136,7 @@ dependencies {
     //Expandable layout
     implementation "com.github.skydoves:expandablelayout:1.0.7"
 
+    //bottom sheet
+    implementation 'com.flipboard:bottomsheet-core:1.5.3'
+
 }
