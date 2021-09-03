@@ -8,6 +8,26 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="action_global_categoryFragment">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
+                  <entry key="action_global_gudieFragment_from_left">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
+                  <entry key="action_global_gudieFragment_from_right">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
+                  <entry key="action_global_searchFragment">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
                   <entry key="categoryFragment">
                     <value>
                       <LayoutPositions>
@@ -17,19 +37,17 @@
                             <option name="y" value="12" />
                           </Point>
                         </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_categoryFragment_to_gudieFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_categoryFragment_to_searchFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="filterBottomSheetDialogFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="81" />
+                            <option name="y" value="-303" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -42,20 +60,6 @@
                             <option name="x" value="103" />
                             <option name="y" value="349" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_gudieFragment_to_categoryFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_gudieFragment_to_searchFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -71,12 +75,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_searchFragment_to_categoryFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_searchFragment_to_gudieFragment">
+                            <entry key="action_searchFragment_to_filterBottomSheetDialogFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

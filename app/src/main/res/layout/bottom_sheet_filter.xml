@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:text="فیلتر ها"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_close_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black_normal" />
+
+    <View
+        android:id="@+id/line1_filter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="#C8C1C1"
+        app:layout_constraintTop_toBottomOf="@id/btn_close_filter" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1_filter">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_fitler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacing="14dp"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="آموزش"
+                android:textAppearance="@style/boldChipText"
+                android:textColor="@color/text_color_chip_state_list"
+                android:textSize="13sp"
+                app:checkedIconEnabled="false"
+                app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="دانشجویی"
+                android:textAppearance="@style/boldChipText"
+                android:textColor="@color/text_color_chip_state_list"
+                android:textSize="13sp"
+                app:checkedIconEnabled="false"
+                app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="پیشخوان خدمت"
+                android:textAppearance="@style/boldChipText"
+                android:textColor="@color/text_color_chip_state_list"
+                android:textSize="13sp"
+                app:checkedIconEnabled="false"
+                app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="مالی و اداری"
+                android:textAppearance="@style/boldChipText"
+                android:textColor="@color/text_color_chip_state_list"
+                android:textSize="13sp"
+                app:checkedIconEnabled="false"
+                app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="ثبت نام"
+                android:textAppearance="@style/boldChipText"
+                android:textColor="@color/text_color_chip_state_list"
+                android:textSize="13sp"
+                app:checkedIconEnabled="false"
+                app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="ارزشیابی"
+                android:textAppearance="@style/boldChipText"
+                android:textColor="@color/text_color_chip_state_list"
+                android:textSize="13sp"
+                app:checkedIconEnabled="false"
+                app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="سیستم"
+                android:textAppearance="@style/boldChipText"
+                android:textColor="@color/text_color_chip_state_list"
+                android:textSize="13sp"
+                app:checkedIconEnabled="false"
+                app:chipBackgroundColor="@color/bg_chip_state_list" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+
+    <View
+        android:id="@+id/line2_filter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="#C8C1C1"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_scroll_filter"
+        app:layout_goneMarginTop="18dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

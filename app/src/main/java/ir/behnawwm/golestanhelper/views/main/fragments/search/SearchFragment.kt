@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mikepenz.fastadapter.FastAdapter
@@ -27,18 +28,17 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
         binding.apply {
             val items = listOf(
-                SearchListItem("شسیسیسشی"),
-                SearchListItem("شسیشس"),
-                SearchListItem("ظطزی"),
-                SearchListItem("لبعتلب"),
-                SearchListItem("قثدذرز"),
-                )
+                SearchListItem("ثبت نام اصلی"),
+                SearchListItem("ثبت نام مقدماتی"),
+                SearchListItem("پرداخت خوابگاه"),
+                SearchListItem("مشاهده ریز نمرات"),
+                SearchListItem("مشاهده معدل ترم"),
+            )
             val itemAdapter = ItemAdapter<SearchListItem>()
             itemAdapter.add(items)
             val mainListAdapter = FastAdapter.with(itemAdapter)
 
             // RecyclerView Init
-//        mainListAdapter = MainListAdapter(this)
             binding.recyclerView.adapter = mainListAdapter
             binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
             val divider = DividerItemDecoration(
@@ -55,6 +55,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             binding.recyclerView.addItemDecoration(divider)
             binding.recyclerView.setHasFixedSize(true)
 
+
+            fabFilter.setOnClickListener {
+                findNavController().navigate(R.id.action_searchFragment_to_filterBottomSheetDialogFragment)
+            }
         }
 
         return binding.root
