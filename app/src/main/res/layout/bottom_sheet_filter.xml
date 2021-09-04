@@ -203,7 +203,7 @@
         android:id="@+id/toggle_switch_filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_border_round"
         android:layoutDirection="rtl"
         android:textSize="14sp"
@@ -221,23 +221,33 @@
         app:uncheckedTextColor="@color/black" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_ok_filter"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue_f"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_cancel_filter"
-        app:layout_constraintTop_toBottomOf="@+id/toggle_switch_filter" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_switch_filter"
+        app:layout_goneMarginLeft="4dp">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_cancel_filter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue_f"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toggle_switch_filter" />
+        <Button
+            android:id="@+id/btn_ok_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue_f"
+            android:text="پاک کردن فیلترها"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_cancel_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue_f"
+            android:text="اعمال"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
