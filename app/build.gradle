@@ -136,7 +136,9 @@ dependencies {
     //Expandable layout
     implementation "com.github.skydoves:expandablelayout:1.0.7"
 
-    //bottom sheet
-    implementation 'com.flipboard:bottomsheet-core:1.5.3'
+
+    //toggle switch
+    implementation 'us.belka:androidtoggleswitch:1.2.2'
+    implementation 'com.llollox:androidtoggleswitch:2.0.1'
 
 }

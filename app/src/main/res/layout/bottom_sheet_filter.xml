@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -156,7 +158,86 @@
         android:layout_height="1dp"
         android:layout_marginTop="14dp"
         android:background="#C8C1C1"
-        app:layout_constraintTop_toBottomOf="@id/horizontal_scroll_filter"
-        app:layout_goneMarginTop="18dp" />
+        app:layout_constraintTop_toBottomOf="@id/horizontal_scroll_filter" />
 
+    <RadioGroup
+        android:id="@+id/radio_group_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2_filter">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layoutDirection="rtl"
+            android:text="همه"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:buttonTint="@color/radio_button_tint" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="اخیرا مشاهده شده"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:buttonTint="@color/radio_button_tint" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="ذخیره شده"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:buttonTint="@color/radio_button_tint" />
+    </RadioGroup>
+
+
+    <com.llollox.androidtoggleswitch.widgets.ToggleSwitch
+        android:id="@+id/toggle_switch_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_border_round"
+        android:layoutDirection="rtl"
+        android:textSize="14sp"
+        app:checkedBackgroundColor="@color/blue_f"
+        app:checkedTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_filter"
+        app:separatorColor="@color/gray_border"
+        app:textToggleCenter="پردازش"
+        app:textToggleLeft="همه"
+        app:textToggleRight="گزارش"
+        app:toggleWidth="100dp"
+        app:uncheckedBackgroundColor="@color/transparent"
+        app:uncheckedTextColor="@color/black" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ok_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue_f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel_filter"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_switch_filter" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cancel_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue_f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_switch_filter" />
 </androidx.constraintlayout.widget.ConstraintLayout>
