@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:background="@color/blue_f"
+    tools:context=".views.TestActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/circle2" />
+
+    <TextView
+        android:id="@+id/tv_golestan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="راهنمای سامانه"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_golestan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="گلستان"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_golestan1"
+        app:layout_constraintStart_toStartOf="@+id/tv_golestan1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_golestan1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

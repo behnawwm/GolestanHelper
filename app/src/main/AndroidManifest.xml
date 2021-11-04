@@ -10,16 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".views.main.RoleSelectActivity"
-            android:exported="true" />
-        <activity
-            android:name=".views.main.MainActivity"
-            android:screenOrientation="portrait">
+            android:name=".views.TestActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.main.RoleSelectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".views.main.MainActivity"
+            android:screenOrientation="portrait">
+
         </activity>
     </application>
 
