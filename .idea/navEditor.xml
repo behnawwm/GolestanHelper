@@ -28,13 +28,25 @@
                       <LayoutPositions />
                     </value>
                   </entry>
+                  <entry key="categoryDetilsFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="437" />
+                            <option name="y" value="-301" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="categoryFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="236" />
-                            <option name="y" value="12" />
+                            <option name="x" value="312" />
+                            <option name="y" value="5" />
                           </Point>
                         </option>
                       </LayoutPositions>

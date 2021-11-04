@@ -18,7 +18,11 @@
         android:id="@+id/categoryFragment"
         android:name="ir.behnawwm.golestanhelper.views.main.fragments.category.CategoryFragment"
         android:label="CategoryFragment"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetilsFragment"
+            app:destination="@id/categoryDetilsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gudieFragment"
         android:name="ir.behnawwm.golestanhelper.views.main.fragments.guide.GuideFragment"
@@ -57,5 +61,14 @@
         android:name="ir.behnawwm.golestanhelper.views.main.fragments.search.FilterBottomSheetDialogFragment"
         android:label="FilterBottomSheetDialogFragment"
         tools:layout="@layout/bottom_sheet_filter" />
+    <fragment
+        android:id="@+id/categoryDetilsFragment"
+        android:name="ir.behnawwm.golestanhelper.views.main.fragments.category.categoryDetails.CategoryDetilsFragment"
+        android:label="CategoryDetilsFragment"
+        tools:layout="@layout/fragment_category_details">
+        <argument
+            android:name="selectedCategory"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

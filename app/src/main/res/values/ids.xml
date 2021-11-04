@@ -3,5 +3,6 @@
 <resources>
     <item name="fastadapter_list_search" type="id" />
     <item name="fastadapter_list_guide" type="id" />
+    <item name="fastadapter_list_fragment_details" type="id" />
 
 </resources>
