@@ -141,4 +141,5 @@ dependencies {
     implementation 'us.belka:androidtoggleswitch:1.2.2'
     implementation 'com.llollox:androidtoggleswitch:2.0.1'
 
+
 }

@@ -8,54 +8,117 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:padding="8dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="8dp"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="1">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            android:text="آموزش"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/layer1"
+            app:shapeAppearance="@style/RoundedSquare" />
     </FrameLayout>
 
     <FrameLayout
-        android:padding="8dp"
         android:id="@+id/frameLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="8dp"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:layout_constraintWidth_percent="0.5">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            android:text="ثبت نام"
 
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/student"
+            app:shapeAppearance="@style/RoundedSquare" />
     </FrameLayout>
 
     <FrameLayout
-        android:padding="8dp"
         android:id="@+id/frameLayout3"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.3"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:layout_constraintWidth_percent="0.5">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            android:text="دانشجویی"
 
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/student"
+            app:shapeAppearance="@style/RoundedSquare" />
     </FrameLayout>
 
     <FrameLayout
-        android:padding="8dp"
         android:id="@+id/frameLayout4"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="8dp"
         app:layout_constraintHeight_percent="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
         app:layout_constraintWidth_percent="0.5">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
 
+            android:text="مالی و اداری"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/student"
+            app:shapeAppearance="@style/RoundedSquare" />
     </FrameLayout>
 
     <FrameLayout
@@ -67,8 +130,25 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout3"
         app:layout_constraintWidth_percent="0.5">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            android:text="ارزشیابی"
 
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/student"
+            app:shapeAppearance="@style/RoundedSquare" />
     </FrameLayout>
+
 
     <FrameLayout
         android:id="@+id/frameLayout6"
@@ -80,19 +160,51 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
         app:layout_constraintWidth_percent="0.6">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            android:text="پیشخوان خدمت"
 
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/student"
+            app:shapeAppearance="@style/RoundedSquare" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/frameLayout5"
         android:layout_width="0dp"
-        android:padding="8dp"
         android:layout_height="0dp"
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
         app:layout_constraintWidth_percent="0.4">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            android:text="سیستم"
 
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/student"
+            app:shapeAppearance="@style/RoundedSquare" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
