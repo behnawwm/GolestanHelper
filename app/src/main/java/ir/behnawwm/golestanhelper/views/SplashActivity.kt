@@ -7,7 +7,6 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.AnimationUtils
 import androidx.lifecycle.lifecycleScope
 import ir.behnawwm.golestanhelper.R
-import ir.behnawwm.golestanhelper.databinding.ActivityTestBinding
 import ir.behnawwm.golestanhelper.views.main.MainActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -16,15 +15,16 @@ import android.animation.ArgbEvaluator
 import java.lang.Exception
 import android.animation.ObjectAnimator
 import android.graphics.Color
+import ir.behnawwm.golestanhelper.databinding.ActivitySplashBinding
 
 
-class TestActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityTestBinding
+    lateinit var binding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTestBinding.inflate(layoutInflater)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 

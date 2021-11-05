@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:background="@color/blue_f"
-    tools:context=".views.TestActivity">
+    tools:context=".views.SplashActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:lottie_autoPlay="true"
+        app:lottie_speed="1.5"
         app:lottie_rawRes="@raw/circle2" />
 
     <TextView

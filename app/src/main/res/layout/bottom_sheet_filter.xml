@@ -4,7 +4,7 @@
     xmlns:custom="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="20dp">
+    android:paddingBottom="25dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,6 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line1_filter">
 
@@ -170,6 +171,7 @@
         app:layout_constraintTop_toBottomOf="@id/line2_filter">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radiobutton_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
@@ -180,6 +182,7 @@
             app:buttonTint="@color/radio_button_tint" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radiobutton_recently"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"
@@ -189,6 +192,7 @@
             app:buttonTint="@color/radio_button_tint" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radiobutton_saved"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"
@@ -230,18 +234,19 @@
         app:layout_constraintTop_toBottomOf="@+id/toggle_switch_filter"
         app:layout_goneMarginLeft="4dp">
 
-        <Button
-            android:id="@+id/btn_ok_filter"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel_filter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="8dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/blue_f"
+            android:backgroundTint="@color/white"
             android:text="پاک کردن فیلترها"
-            android:textColor="@color/white" />
+            android:textColor="@color/blue_f"
+            />
 
         <Button
-            android:id="@+id/btn_cancel_filter"
+            android:id="@+id/btn_ok_filter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
