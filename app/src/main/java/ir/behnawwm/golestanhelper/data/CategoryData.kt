@@ -1,4 +1,7 @@
-package ir.behnawwm.golestanhelper.views.main.fragments.category.categoryDetails
+package ir.behnawwm.golestanhelper.data
+
+import ir.behnawwm.golestanhelper.views.main.fragments.category.categoryDetails.CategoryDetailsListItem
+import ir.behnawwm.golestanhelper.views.main.fragments.category.categoryDetails.ResultItem
 
 object CategoryData {
 

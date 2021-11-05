@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.database.entity
+package ir.behnawwm.golestanhelper.data.database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -83,7 +83,6 @@ class FilterBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
 
     companion object {
-
         const val RADIO_BUTTON_DEFAULT = 0
         const val RADIO_BUTTON_RECENTLY_VISITED = 1
         const val RADIO_BUTTON_SAVED = 2

@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.database.entity.relation
+package ir.behnawwm.golestanhelper.data.database.entity.relation
 
 import androidx.room.Entity
 

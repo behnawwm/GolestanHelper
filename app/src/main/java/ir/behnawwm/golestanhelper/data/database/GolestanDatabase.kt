@@ -1,13 +1,13 @@
-package ir.behnawwm.golestanhelper.database
+package ir.behnawwm.golestanhelper.data.database
 
 import android.content.Context
 import androidx.room.*
-import ir.behnawwm.golestanhelper.database.entity.Request
-import ir.behnawwm.golestanhelper.database.entity.Role
-import ir.behnawwm.golestanhelper.database.entity.Type
-import ir.behnawwm.golestanhelper.database.entity.relation.RequestRoleCrossRef
-import ir.behnawwm.golestanhelper.database.entity.relation.RequestTypeCrossRef
-import ir.behnawwm.golestanhelper.database.dao.RequestDao
+import ir.behnawwm.golestanhelper.data.database.entity.Request
+import ir.behnawwm.golestanhelper.data.database.entity.Role
+import ir.behnawwm.golestanhelper.data.database.entity.Type
+import ir.behnawwm.golestanhelper.data.database.entity.relation.RequestRoleCrossRef
+import ir.behnawwm.golestanhelper.data.database.entity.relation.RequestTypeCrossRef
+import ir.behnawwm.golestanhelper.data.database.dao.RequestDao
 
 @Database(
     entities = [

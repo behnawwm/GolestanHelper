@@ -1,11 +1,11 @@
-package ir.behnawwm.golestanhelper.database.dao
+package ir.behnawwm.golestanhelper.data.database.dao
 
 import androidx.room.*
-import ir.behnawwm.golestanhelper.database.entity.Request
-import ir.behnawwm.golestanhelper.database.entity.Type
-import ir.behnawwm.golestanhelper.database.entity.relation.RequestTypeCrossRef
-import ir.behnawwm.golestanhelper.database.entity.relation.RequestWithTypes
-import ir.behnawwm.golestanhelper.database.entity.relation.TypeWithRequests
+import ir.behnawwm.golestanhelper.data.database.entity.Request
+import ir.behnawwm.golestanhelper.data.database.entity.Type
+import ir.behnawwm.golestanhelper.data.database.entity.relation.RequestTypeCrossRef
+import ir.behnawwm.golestanhelper.data.database.entity.relation.RequestWithTypes
+import ir.behnawwm.golestanhelper.data.database.entity.relation.TypeWithRequests
 
 @Dao
 interface RequestDao {

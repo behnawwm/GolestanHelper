@@ -19,6 +19,16 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
 
     lateinit var binding: FragmentCategoryBinding
 
+    companion object{
+        const val CATEGORY_AMOOZESH = 1
+        const val CATEGORY_SABTENAM = 2
+        const val CATEGORY_DANESHJOOYI = 3
+        const val CATEGORY_MALI = 4
+        const val CATEGORY_ARZESHYABI = 5
+        const val CATEGORY_PISHKHAN = 6
+        const val CATEGORY_SYSTEM = 7
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,35 +38,34 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
 
         binding.apply {
             frameLayoutAmoozesh.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(1)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_AMOOZESH)
                 findNavController().navigate(action)
             }
             frameLayoutSabtenam.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(2)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_SABTENAM)
                 findNavController().navigate(action)
             }
             frameLayoutDaneshjooyi.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(3)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_DANESHJOOYI)
                 findNavController().navigate(action)
             }
             frameLayoutMali.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(4)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_MALI)
                 findNavController().navigate(action)
             }
             framelayoutArzeshyabi.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(5)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_ARZESHYABI)
                 findNavController().navigate(action)
             }
 
             frameLayoutPishkhan.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(6)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_PISHKHAN)
                 findNavController().navigate(action)
             }
             frameLayoutSabtenam.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(7)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_SYSTEM)
                 findNavController().navigate(action)
             }
-
 
 
         }
