@@ -34,7 +34,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/layout_et_search"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:listitem="@layout/item_list_category_details" />
+        tools:listitem="@layout/item_list2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_filter"

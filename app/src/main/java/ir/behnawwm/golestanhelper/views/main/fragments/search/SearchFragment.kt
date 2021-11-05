@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mikepenz.fastadapter.FastAdapter
@@ -17,6 +18,8 @@ import ir.behnawwm.golestanhelper.databinding.FragmentSearchBinding
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
     lateinit var binding: FragmentSearchBinding
+    private val args: SearchFragmentArgs by navArgs()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +28,11 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     ): View {
         binding = FragmentSearchBinding.inflate(inflater)
 
+        findNavController().addOnDestinationChangedListener { _, destination, _ ->    //todo change this method to check if dialog is closed and filter the list
+            if (destination.label == "SearchFragment") {
+                refreshListAfterFilterDialog()
+            }
+        }
 
         binding.apply {
             val items = listOf(
@@ -57,10 +65,24 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
 
             fabFilter.setOnClickListener {
-                findNavController().navigate(R.id.action_searchFragment_to_filterBottomSheetDialogFragment)
+                val action =
+                    SearchFragmentDirections.actionSearchFragmentToFilterBottomSheetDialogFragment(
+                        args.filteredChipData,
+                        args.filteredRadioData,
+                        args.filteredToggleData
+                    )
+                findNavController().navigate(action)
+
             }
         }
 
         return binding.root
     }
+
+    private fun refreshListAfterFilterDialog() {
+        //todo
+
+
+    }
+
 }
