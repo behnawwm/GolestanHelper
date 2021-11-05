@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/saved"
+        android:title="Saved"
+        android:icon="@drawable/ic_bookmark"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/person"
+        android:title="تغییر نوع کاربر"
+        android:icon="@drawable/ic_bookmark"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/faq"
+        android:title="پرسش های متداول"
+        android:icon="@drawable/ic_bookmark"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/aboutus"
+        android:title="درباره ما"
+        android:icon="@drawable/ic_bookmark"
+        app:showAsAction="never"/>
+</menu>

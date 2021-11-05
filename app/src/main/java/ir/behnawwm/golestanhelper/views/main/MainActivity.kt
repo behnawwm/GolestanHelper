@@ -7,26 +7,16 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.edit
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.snackbar.Snackbar
 import ir.behnawwm.golestanhelper.databinding.ActivityMainBinding
-
-import androidx.core.content.ContextCompat
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-
-import androidx.recyclerview.widget.DividerItemDecoration
-import com.mikepenz.fastadapter.FastAdapter
-import com.mikepenz.fastadapter.adapters.ItemAdapter
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.utils.hideKeyboard
 import nl.joery.animatedbottombar.AnimatedBottomBar
@@ -73,6 +63,8 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         val navController = navHostFragment.navController
 
+        setSupportActionBar(binding.topAppBar)
+        //todo commented test
         binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
             override fun onTabSelected(
                 lastIndex: Int,
@@ -83,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 when (newIndex) {
                     0 -> {
                         navController.navigate(R.id.action_global_searchFragment)
-                        binding.toolbarTitle.text = "جستجو سریع"
+                        binding.topAppBar.title = "جستجو سریع"
                     }
                     1 -> {
                         if (newIndex > lastIndex) {
@@ -91,11 +83,11 @@ class MainActivity : AppCompatActivity() {
                         } else {
                             navController.navigate(R.id.action_global_gudieFragment_from_right)
                         }
-                        binding.toolbarTitle.text = "راهنمای آموزشی"
+                        binding.topAppBar.title = "راهنمای آموزشی"
                     }
                     2 -> {
                         navController.navigate(R.id.action_global_categoryFragment)
-                        binding.toolbarTitle.text = "دسته بندی های جامع گلستان"
+                        binding.topAppBar.title = "دسته بندی های جامع"
                     }
 
                     else -> {
@@ -104,17 +96,14 @@ class MainActivity : AppCompatActivity() {
                     hideKeyboard()
                 }
             }
+        })
+
 //            // An optional method that will be fired whenever an already selected tab has been selected again.
 //            override fun onTabReselected(index: Int, tab: AnimatedBottomBar.Tab) {
 //                Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
 //            }
-        })
-        binding.btnBookmark.setOnClickListener {
 
-        }
-        binding.btnPerson.setOnClickListener {
 
-        }
 //        if (isFirstTime) {
 //            isFirstTime = false
 //        }
@@ -138,4 +127,18 @@ class MainActivity : AppCompatActivity() {
         }
         pressedTime = System.currentTimeMillis();
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_search, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }

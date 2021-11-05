@@ -51,6 +51,17 @@ class FilterBottomSheetDialogFragment : BottomSheetDialogFragment() {
                 findNavController().navigate(action)
                 dismiss()
             }
+            btnCancelFilter.setOnClickListener {
+                val action =
+                    FilterBottomSheetDialogFragmentDirections.actionFilterBottomSheetDialogFragmentToSearchFragment()
+                        .apply {
+                            filteredChipData = intArrayOf()
+                            filteredRadioData = 0
+                            filteredToggleData = 0
+                        }
+                findNavController().navigate(action)
+                dismiss()
+            }
 
 
         }
