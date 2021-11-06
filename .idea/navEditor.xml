@@ -13,16 +13,11 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-162" />
-                            <option name="y" value="-405" />
+                            <option name="x" value="-237" />
+                            <option name="y" value="-399" />
                           </Point>
                         </option>
                       </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="action_global_aboutUsFragment">
-                    <value>
-                      <LayoutPositions />
                     </value>
                   </entry>
                   <entry key="action_global_categoryFragment">
@@ -36,6 +31,11 @@
                     </value>
                   </entry>
                   <entry key="action_global_gudieFragment_from_right">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
+                  <entry key="action_global_savedFragment">
                     <value>
                       <LayoutPositions />
                     </value>
@@ -74,6 +74,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="faqFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-286" />
+                            <option name="y" value="-696" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

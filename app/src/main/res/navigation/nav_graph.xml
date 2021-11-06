@@ -15,17 +15,17 @@
             app:destination="@id/filterBottomSheetDialogFragment"></action>
         <argument
             android:name="filteredChipData"
+            android:defaultValue="@null"
             app:argType="integer[]"
-            app:nullable="true"
-            android:defaultValue="@null"/>
+            app:nullable="true" />
         <argument
             android:name="filteredRadioData"
-            app:argType="integer"
-            android:defaultValue="0"/>
+            android:defaultValue="0"
+            app:argType="integer" />
         <argument
             android:name="filteredToggleData"
-            app:argType="integer"
-            android:defaultValue="0"/>
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/categoryFragment"
@@ -98,14 +98,26 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/aboutUsFragment"
-        android:name="ir.behnawwm.golestanhelper.views.main.fragments.faq.FaqFragment"
-        android:label="fragment_about_us"
-        tools:layout="@layout/fragment_about_us" />
-    <action android:id="@+id/action_global_aboutUsFragment" app:destination="@id/aboutUsFragment" />
-    <fragment
         android:id="@+id/savedFragment"
         android:name="ir.behnawwm.golestanhelper.views.main.fragments.saved.SavedFragment"
         android:label="SavedFragment" />
-    <action android:id="@+id/action_global_savedFragment" app:destination="@id/savedFragment" />
+    <action
+        android:id="@+id/action_global_savedFragment"
+        app:destination="@id/savedFragment" />
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="ir.behnawwm.golestanhelper.views.main.fragments.faq.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="ir.behnawwm.golestanhelper.views.main.fragments.about.AboutUsFragment"
+        android:label="AboutUsFragment" />
+    <action
+        android:id="@+id/action_global_faqFragment"
+        app:destination="@id/faqFragment" />
+    <action
+        android:id="@+id/action_global_aboutUsFragment"
+        app:destination="@id/aboutUsFragment" />
+
 </navigation>

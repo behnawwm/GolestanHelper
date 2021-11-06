@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.menu_faq -> {
                 if (navController.currentDestination?.label != "FaqFragment")     //todo change this to a better way!
-                    navController.navigate(R.id.action_global_savedFragment)
+                    navController.navigate(R.id.action_global_faqFragment)
             }
             R.id.menu_person -> Toast.makeText(
                 applicationContext,

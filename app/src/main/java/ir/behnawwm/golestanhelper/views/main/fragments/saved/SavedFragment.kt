@@ -45,7 +45,6 @@ class SavedFragment : Fragment(R.layout.fragment_saved) {
                 Color.BLACK
             )
         }
-
         super.onCreateOptionsMenu(menu, inflater)
     }
 
