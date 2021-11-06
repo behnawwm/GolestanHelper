@@ -2,4 +2,6 @@
     <string name="app_name">Golestan Helper</string>
     <string name="search_hint">عبارت مورد نظر خود را تایپ کنید</string>
     <string name="sample_guide_desc">راهنمای ثبت‌نام مقدماتی در سامانه گلستان مخصوص دانشجویان راهنمای ثبت‌نام مقدماتی در سامانه گلستان مخصوص دانشجویان</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

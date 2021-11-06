@@ -7,18 +7,24 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.edit
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
 import ir.behnawwm.golestanhelper.databinding.ActivityMainBinding
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.utils.hideKeyboard
+import kotlinx.android.synthetic.main.activity_main.*
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 
@@ -29,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
     private lateinit var mainListAdapter: MainListAdapter
-
+    lateinit var navController: NavController
     private var pressedTime: Long = 0
 
 
@@ -49,9 +55,6 @@ class MainActivity : AppCompatActivity() {
             mainListAdapter.isFiltered = value
         }
 
-    ///////////////////////////////////////////////////////////////////////////
-    // Methods
-    ///////////////////////////////////////////////////////////////////////////
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,9 +64,10 @@ class MainActivity : AppCompatActivity() {
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
-        val navController = navHostFragment.navController
+        navController = navHostFragment.navController
 
         setSupportActionBar(binding.topAppBar)
+
         //todo commented test
         binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
             override fun onTabSelected(
@@ -115,18 +119,6 @@ class MainActivity : AppCompatActivity() {
     fun getAdapterScaleDownAnimator(isScaledDown: Boolean): ValueAnimator =
         mainListAdapter.getScaleDownAnimator(isScaledDown)
 
-    override fun onBackPressed() {
-        if (pressedTime + 2000 > System.currentTimeMillis()) {
-            super.onBackPressed();
-            finish();
-        } else {
-            Snackbar.make(binding.root, "Press back again to exit", Snackbar.LENGTH_SHORT)
-                .setBackgroundTint(resources.getColor(R.color.black_normal))
-                .setTextColor(resources.getColor(R.color.white))
-                .show()
-        }
-        pressedTime = System.currentTimeMillis();
-    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_search, menu)
@@ -135,10 +127,39 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle item selection
-        return when (item.itemId) {
-
+        when (item.itemId) {
+            R.id.menu_aboutus -> {
+                if (navController.currentDestination?.label != "AboutUsFragment")    //todo change this to a better way!
+                    navController.navigate(R.id.action_global_aboutUsFragment)
+            }
+            R.id.menu_saved -> {
+                if (navController.currentDestination?.label != "SavedFragment")     //todo change this to a better way!
+                    navController.navigate(R.id.action_global_savedFragment)
+            }
+            R.id.menu_faq -> {
+                if (navController.currentDestination?.label != "FaqFragment")     //todo change this to a better way!
+                    navController.navigate(R.id.action_global_savedFragment)
+            }
+            R.id.menu_person -> Toast.makeText(
+                applicationContext,
+                "Not implemented yet!",
+                Toast.LENGTH_SHORT
+            ).show()  //todo
             else -> super.onOptionsItemSelected(item)
         }
+        return true
     }
 
+//    override fun onBackPressed() {
+//        if (pressedTime + 2000 > System.currentTimeMillis()) {
+//            super.onBackPressed();
+//            finish();
+//        } else {
+//            Snackbar.make(binding.root, "Press back again to exit", Snackbar.LENGTH_SHORT)
+//                .setBackgroundTint(resources.getColor(R.color.black_normal))
+//                .setTextColor(resources.getColor(R.color.white))
+//                .show()
+//        }
+//        pressedTime = System.currentTimeMillis();
+//    }
 }

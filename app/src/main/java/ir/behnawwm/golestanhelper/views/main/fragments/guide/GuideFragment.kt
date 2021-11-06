@@ -13,11 +13,16 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.databinding.FragmentGuideBinding
 import ir.behnawwm.golestanhelper.databinding.FragmentSearchBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class GuideFragment : Fragment(R.layout.fragment_guide) {
 
     lateinit var binding: FragmentGuideBinding
 
+    override fun onResume() {
+        super.onResume()
+        requireActivity().topAppBar.navigationIcon = null
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

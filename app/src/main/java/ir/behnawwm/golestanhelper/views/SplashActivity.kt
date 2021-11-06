@@ -45,7 +45,7 @@ class SplashActivity : AppCompatActivity() {
 
             override fun onAnimationEnd(animation: Animator) {
                 startActivity(Intent(baseContext, MainActivity::class.java))
-
+                finish()
             }
 
             override fun onAnimationCancel(animation: Animator) {

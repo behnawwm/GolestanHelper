@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.views.main
+package ir.behnawwm.golestanhelper.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

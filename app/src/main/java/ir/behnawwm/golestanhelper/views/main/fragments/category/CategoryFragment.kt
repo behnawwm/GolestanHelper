@@ -14,6 +14,7 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.databinding.FragmentCategoryBinding
 import ir.behnawwm.golestanhelper.views.main.fragments.guide.GuideListItem
+import kotlinx.android.synthetic.main.activity_main.*
 
 class CategoryFragment : Fragment(R.layout.fragment_category) {
 
@@ -27,6 +28,11 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
         const val CATEGORY_ARZESHYABI = 5
         const val CATEGORY_PISHKHAN = 6
         const val CATEGORY_SYSTEM = 7
+    }
+
+    override fun onResume() {
+        super.onResume()
+        requireActivity().topAppBar.navigationIcon = null
     }
 
     override fun onCreateView(

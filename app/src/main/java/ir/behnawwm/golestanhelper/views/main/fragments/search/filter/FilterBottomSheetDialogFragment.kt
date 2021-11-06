@@ -1,4 +1,4 @@
-package ir.behnawwm.golestanhelper.views.main.fragments.search
+package ir.behnawwm.golestanhelper.views.main.fragments.search.filter
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,7 +15,6 @@ class FilterBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     lateinit var binding: BottomSheetFilterBinding
     private val args: FilterBottomSheetDialogFragmentArgs by navArgs()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

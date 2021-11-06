@@ -6,7 +6,7 @@
     <item
         android:id="@+id/menu_saved"
         android:title="Saved"
-        android:icon="@drawable/ic_bookmark_border"
+        android:icon="@drawable/ic_bookmark"
         app:showAsAction="ifRoom"/>
 
     <item

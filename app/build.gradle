@@ -65,6 +65,7 @@ kapt {
 dependencies {
     // General
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     compileOnly 'org.glassfish:javax.annotation:10.0-b28'
 
     // Kotlin + Coroutines

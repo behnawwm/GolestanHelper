@@ -71,7 +71,7 @@
         app:popExitAnim="@anim/slide_out_right" />
     <dialog
         android:id="@+id/filterBottomSheetDialogFragment"
-        android:name="ir.behnawwm.golestanhelper.views.main.fragments.search.FilterBottomSheetDialogFragment"
+        android:name="ir.behnawwm.golestanhelper.views.main.fragments.search.filter.FilterBottomSheetDialogFragment"
         android:label="FilterBottomSheetDialogFragment"
         tools:layout="@layout/bottom_sheet_filter">
         <action
@@ -97,4 +97,15 @@
             android:name="selectedCategory"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="ir.behnawwm.golestanhelper.views.main.fragments.faq.FaqFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <action android:id="@+id/action_global_aboutUsFragment" app:destination="@id/aboutUsFragment" />
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="ir.behnawwm.golestanhelper.views.main.fragments.saved.SavedFragment"
+        android:label="SavedFragment" />
+    <action android:id="@+id/action_global_savedFragment" app:destination="@id/savedFragment" />
 </navigation>

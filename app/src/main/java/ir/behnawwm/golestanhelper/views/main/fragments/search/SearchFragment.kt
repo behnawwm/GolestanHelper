@@ -14,12 +14,19 @@ import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.databinding.FragmentSearchBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
     lateinit var binding: FragmentSearchBinding
     private val args: SearchFragmentArgs by navArgs()
 
+    override fun onResume() {
+        super.onResume()
+        requireActivity().topAppBar.navigationIcon = null
+        requireActivity().topAppBar.title = "جستجو سریع"
+        refreshListAfterFilterDialog()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,12 +34,6 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSearchBinding.inflate(inflater)
-
-        findNavController().addOnDestinationChangedListener { _, destination, _ ->    //todo change this method to check if dialog is closed and filter the list
-            if (destination.label == "SearchFragment") {
-                refreshListAfterFilterDialog()
-            }
-        }
 
         binding.apply {
             val items = listOf(
