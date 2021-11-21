@@ -7,4 +7,7 @@ interface ApiService {
 
     @GET("/behnawwm/GolestanHelper/master/data/daneshjoo.json")
     suspend fun getDaneshjooData(): List<DaneshjooData>
+
+    @GET("/behnawwm/GolestanHelper/master/data/ostad.json")
+    suspend fun getOstadData(): List<DaneshjooData>
 }
