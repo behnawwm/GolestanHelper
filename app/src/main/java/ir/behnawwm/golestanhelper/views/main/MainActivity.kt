@@ -16,20 +16,26 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.edit
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
 import ir.behnawwm.golestanhelper.databinding.ActivityMainBinding
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ir.behnawwm.golestanhelper.R
+import ir.behnawwm.golestanhelper.data.api.ApiService
 import ir.behnawwm.golestanhelper.utils.hideKeyboard
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.launch
 import nl.joery.animatedbottombar.AnimatedBottomBar
+import javax.inject.Inject
 
 
 var animationPlaybackSpeed: Double = 0.8
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
@@ -67,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         setSupportActionBar(binding.topAppBar)
+
 
         //todo commented test
         binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
@@ -116,7 +123,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Called from FiltersLayout to get adapter scale down animator
      */
-    fun getAdapterScaleDownAnimator(isScaledDown: Boolean): ValueAnimator =
+    fun getAdapterScaleDownAnimator(isScaledDown: Boolean): ValueAnimator =    //todo remove? :|
         mainListAdapter.getScaleDownAnimator(isScaledDown)
 
 
