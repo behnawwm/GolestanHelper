@@ -35,6 +35,6 @@
     <color name="black_normal">#666666</color>
     <color name="gray">#BFBFBF</color>
     <color name="gray_chip_bg">#E0E0E0</color>
-    <color name="gray_border">#C4C4C4</color>
+    <color name="gray_border">#BFBFBF</color>
     <color name="transparent">#00ffffff</color>
 </resources>

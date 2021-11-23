@@ -61,21 +61,21 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             }
             val mainListAdapter = FastAdapter.with(itemAdapter)
 
-            // RecyclerView Init
+            // RecyclerView Init5
             binding.recyclerView.adapter = mainListAdapter
             binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-            val divider = DividerItemDecoration(
-                requireContext(),
-                DividerItemDecoration.VERTICAL
-            )
-
-            divider.setDrawable(
-                ContextCompat.getDrawable(
-                    requireContext(),
-                    R.drawable.horizontal_divider
-                )!!
-            )
-            binding.recyclerView.addItemDecoration(divider)
+//            val divider = DividerItemDecoration(
+//                requireContext(),
+//                DividerItemDecoration.VERTICAL
+//            )
+//
+//            divider.setDrawable(
+//                ContextCompat.getDrawable(
+//                    requireContext(),
+////                    R.drawable.horizontal_divider
+////                )!!
+////            )
+////            binding.recyclerView.addItemDecoration(divider)
             binding.recyclerView.setHasFixedSize(true)
 
 

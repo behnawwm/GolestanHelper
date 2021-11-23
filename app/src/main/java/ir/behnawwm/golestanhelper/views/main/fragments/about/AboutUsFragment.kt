@@ -10,6 +10,12 @@ import ir.behnawwm.golestanhelper.R
 
 import ir.behnawwm.golestanhelper.databinding.FragmentAboutUsBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Intent
+import android.net.Uri
+import android.content.ActivityNotFoundException
+
+
+
 
 
 class AboutUsFragment : Fragment(R.layout.fragment_about_us) {
@@ -29,6 +35,25 @@ class AboutUsFragment : Fragment(R.layout.fragment_about_us) {
         requireActivity().topAppBar.setNavigationIcon(R.drawable.ic_back)
         requireActivity().topAppBar.setNavigationOnClickListener {
             findNavController().popBackStack()
+        }
+
+        binding.apply {
+            tvTelegramAbout.setOnClickListener {
+                val intent =
+                    Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=behnawwm"))
+                startActivity(intent)
+            }
+            tvEmailAbout.setOnClickListener {
+                try {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "behnawwm@gmail.com"))
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Golestan App Suggestions")
+                    intent.putExtra(Intent.EXTRA_TEXT, "")
+                    startActivity(intent)
+                } catch (e: ActivityNotFoundException) {
+
+                }
+            }
+
         }
 
 
