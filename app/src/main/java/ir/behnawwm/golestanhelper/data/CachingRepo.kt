@@ -16,7 +16,7 @@ class CachingRepo @Inject constructor(
         val list = getAllData()
 
         list.forEach {
-            val type = if (it.typeName == "پردازش") 1 else 2
+            val type = if (it.typeName == "پردازش") 1 else 2    //todo enum
             insertRequest(
                 Request(
                     code = it.code,
