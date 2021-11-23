@@ -158,4 +158,8 @@ dependencies {
     //hilt
     implementation 'com.google.dagger:hilt-android:2.38.1'
     kapt 'com.google.dagger:hilt-compiler:2.38.1'
+
+    //toasty
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+
 }

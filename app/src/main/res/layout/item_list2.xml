@@ -57,7 +57,7 @@ too. layout_gravity="center_horizontal" is a lot simpler.
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/subtitle1"
+                    android:id="@+id/tv_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="گزارش 78"

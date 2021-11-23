@@ -44,13 +44,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
     private var pressedTime: Long = 0
 
-
-    private val prefs: SharedPreferences
-        get() = getSharedPreferences("FabFilter", Context.MODE_PRIVATE)
-    private var isFirstTime: Boolean
-        get() = prefs.getBoolean("isFirstTime", true)
-        set(value) = prefs.edit { putBoolean("isFirstTime", value) }
-
     /**
      * Used by FiltersLayout since we don't want to expose mainListAdapter (why?)
      * (Option: Combine everything into one activity if & when necessary)
@@ -60,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         set(value) {
             mainListAdapter.isFiltered = value
         }
-
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -109,15 +101,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-//            // An optional method that will be fired whenever an already selected tab has been selected again.
-//            override fun onTabReselected(index: Int, tab: AnimatedBottomBar.Tab) {
-//                Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
-//            }
-
-
-//        if (isFirstTime) {
-//            isFirstTime = false
-//        }
     }
 
     /**

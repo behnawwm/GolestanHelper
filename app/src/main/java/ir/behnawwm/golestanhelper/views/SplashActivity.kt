@@ -3,19 +3,14 @@ package ir.behnawwm.golestanhelper.views
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.animation.AlphaAnimation
-import android.view.animation.AnimationUtils
-import androidx.lifecycle.lifecycleScope
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.views.main.MainActivity
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import android.animation.Animator
 import android.animation.ArgbEvaluator
-import java.lang.Exception
 import android.animation.ObjectAnimator
 import android.graphics.Color
 import ir.behnawwm.golestanhelper.databinding.ActivitySplashBinding
+import ir.behnawwm.golestanhelper.prefs
 
 
 class SplashActivity : AppCompatActivity() {
@@ -28,24 +23,21 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-//        binding.tvGolestan1.startAnimation(AlphaAnimation(0F, 1F).apply {
-//            duration = 1000
-//            fillAfter = true
-//        })
-
-//        binding.tvGolestan2.startAnimation(AlphaAnimation(0F, 1F).apply {
-//            duration = 1000
-//            fillAfter = true
-//        })
         playTextAnimation()
-
         binding.animationview.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(animation: Animator) {
             }
 
             override fun onAnimationEnd(animation: Animator) {
-                startActivity(Intent(baseContext, MainActivity::class.java))
-                finish()
+                if(prefs.booleanIsFirstTime){
+                    startActivity(Intent(baseContext, RoleSelectActivity::class.java))
+                    finish()
+                }
+                else{
+                    startActivity(Intent(baseContext, MainActivity::class.java))
+                    finish()
+                }
+
             }
 
             override fun onAnimationCancel(animation: Animator) {

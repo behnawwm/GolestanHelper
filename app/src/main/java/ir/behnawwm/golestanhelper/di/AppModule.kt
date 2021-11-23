@@ -5,8 +5,10 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import ir.behnawwm.golestanhelper.data.CachingRepo
 import ir.behnawwm.golestanhelper.data.api.ApiService
 import ir.behnawwm.golestanhelper.data.database.GolestanDatabase
+import ir.behnawwm.golestanhelper.data.database.dao.RequestDao
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -47,11 +49,12 @@ class AppModule {
     fun provideDao(db: GolestanDatabase) = db.requestDao
 
 
-//    //Repository
-//    @Singleton
-//    @Provides
-//    fun provideValidationRepo(
-//        apiService: ApiService,
-//    ) =
-//        ValidationRepo(apiService)
+    //    //Repository
+    @Singleton
+    @Provides
+    fun provideValidationRepo(
+        apiService: ApiService,
+        dao: RequestDao
+    ) =
+        CachingRepo(apiService, dao)
 }
