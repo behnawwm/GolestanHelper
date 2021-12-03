@@ -137,7 +137,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/E:/Downloads/Compressed/Sdk/Sdk/Sdk/icons/material/materialicons/email/baseline_email_24.xml" />
+                                      <entry key="url" value="file:/E:/Downloads/Compressed/Sdk/Sdk/Sdk/icons/material/materialicons/bookmark/baseline_bookmark_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -147,9 +147,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_gmail" />
-                            <entry key="sourceFile" value="C:\Users\Lenovo\Desktop\icons8-gmail-logo.svg" />
+                            <entry key="outputName" value="ic_bookmark" />
+                            <entry key="sourceFile" value="C:\Users\Lenovo\Desktop\bookmark.svg" />
                           </map>
                         </option>
                       </PersistentState>

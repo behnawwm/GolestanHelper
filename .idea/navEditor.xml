@@ -20,7 +20,17 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="action_global_aboutUsFragment">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
                   <entry key="action_global_categoryFragment">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
+                  <entry key="action_global_faqFragment">
                     <value>
                       <LayoutPositions />
                     </value>
@@ -45,13 +55,13 @@
                       <LayoutPositions />
                     </value>
                   </entry>
-                  <entry key="categoryDetilsFragment">
+                  <entry key="categoryDetailsFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="437" />
-                            <option name="y" value="-301" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -68,7 +78,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_categoryFragment_to_categoryDetilsFragment">
+                            <entry key="action_categoryFragment_to_categoryDetailsFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

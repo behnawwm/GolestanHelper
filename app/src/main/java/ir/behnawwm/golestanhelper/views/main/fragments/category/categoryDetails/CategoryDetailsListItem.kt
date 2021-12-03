@@ -9,8 +9,8 @@ import ir.behnawwm.golestanhelper.databinding.ItemListCategoryDetailsBinding
 
 class CategoryDetailsListItem(
     val name: String?,
-    val parentItem: List<CategoryDetailsListItem>?,
-    val childItem : List<ResultItem>?
+    val parentItems: List<CategoryDetailsListItem>?,
+    val childItems: List<ResultItem>?,
 ) :
     AbstractBindingItem<ItemListCategoryDetailsBinding>() {
 

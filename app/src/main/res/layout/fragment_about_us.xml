@@ -35,9 +35,20 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:text="@string/about_us_creators"
+            android:textColor="@color/black_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
             android:id="@+id/tv_email_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:drawableLeft="@drawable/ic_gmail"
             android:drawablePadding="8dp"
             android:text="Behnawwm@gmail.com"

@@ -44,32 +44,32 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
 
         binding.apply {
             frameLayoutAmoozesh.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_AMOOZESH)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetailsFragment(CATEGORY_AMOOZESH)
                 findNavController().navigate(action)
             }
             frameLayoutSabtenam.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_SABTENAM)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetailsFragment(CATEGORY_SABTENAM)
                 findNavController().navigate(action)
             }
             frameLayoutDaneshjooyi.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_DANESHJOOYI)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetailsFragment(CATEGORY_DANESHJOOYI)
                 findNavController().navigate(action)
             }
             frameLayoutMali.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_MALI)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetailsFragment(CATEGORY_MALI)
                 findNavController().navigate(action)
             }
             framelayoutArzeshyabi.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_ARZESHYABI)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetailsFragment(CATEGORY_ARZESHYABI)
                 findNavController().navigate(action)
             }
 
             frameLayoutPishkhan.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_PISHKHAN)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetailsFragment(CATEGORY_PISHKHAN)
                 findNavController().navigate(action)
             }
             frameLayoutSabtenam.setOnClickListener {
-                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetilsFragment(CATEGORY_SYSTEM)
+                val action = CategoryFragmentDirections.actionCategoryFragmentToCategoryDetailsFragment(CATEGORY_SYSTEM)
                 findNavController().navigate(action)
             }
 

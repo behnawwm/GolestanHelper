@@ -31,6 +31,7 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/clipart_about.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/horizontal_divier.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_bookmark.xml" value="0.31576576576576576" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_bookmark_border.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_chevron_left.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_chevron_right.xml" value="0.31576576576576576" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/drawable/ic_clipart_about.xml" value="0.31576576576576576" />
@@ -54,7 +55,7 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/filter_layout_1.xml" value="0.338768115942029" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/filter_layout_2.xml" value="0.30180180180180183" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/filter_layout_3.xml" value="0.30027173913043476" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/fragment_about_us.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/fragment_about_us.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/fragment_category.xml" value="0.22" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/fragment_category_details.xml" value="0.30180180180180183" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/GolestanHelperV2/app/src/main/res/layout/fragment_faq.xml" value="0.30180180180180183" />

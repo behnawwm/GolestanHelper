@@ -162,4 +162,6 @@ dependencies {
     //toasty
     implementation 'com.github.GrenderG:Toasty:1.5.2'
 
+    implementation 'com.diegodobelo.expandingview:expanding-view:0.9.4'
+
 }
