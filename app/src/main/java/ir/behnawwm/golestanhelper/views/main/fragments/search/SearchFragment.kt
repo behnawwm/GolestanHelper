@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -31,7 +32,9 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     lateinit var binding: FragmentSearchBinding
     private val args: SearchFragmentArgs by navArgs()
     private lateinit var itemAdapter: ItemAdapter<SearchListItem>
+    private lateinit var mainListAdapter: FastAdapter<SearchListItem>
     private lateinit var listItems: List<SearchListItem>
+    private val makeItemBookmarklivedata = MutableLiveData<Request>()
 
     @Inject
     lateinit var cachingRepo: CachingRepo
@@ -43,6 +46,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         requireActivity().topAppBar.title = "جستجو سریع"
         refreshListAfterFilterDialog()
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -50,16 +54,23 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     ): View {
         binding = FragmentSearchBinding.inflate(inflater)
 
+        makeItemBookmarklivedata.observe(viewLifecycleOwner) {  //mvvm
+            lifecycleScope.launch {
+                cachingRepo.insertRequest(it)
+
+            }
+        }
+
         binding.apply {
             setupItemAdapter()
             lifecycleScope.launch {
                 val items = cachingRepo.getAllDataFromDb()
                 listItems = items.map {
-                    SearchListItem(it)
+                    SearchListItem(it, makeItemBookmarklivedata)
                 }
                 itemAdapter.set(listItems)
             }
-            val mainListAdapter = FastAdapter.with(itemAdapter)
+            mainListAdapter = FastAdapter.with(itemAdapter)
 
             // RecyclerView Init5
             binding.recyclerView.adapter = mainListAdapter
@@ -68,7 +79,6 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 //                requireContext(),
 //                DividerItemDecoration.VERTICAL
 //            )
-//
 //            divider.setDrawable(
 //                ContextCompat.getDrawable(
 //                    requireContext(),
@@ -77,7 +87,6 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 ////            )
 ////            binding.recyclerView.addItemDecoration(divider)
             binding.recyclerView.setHasFixedSize(true)
-
 
             fabFilter.setOnClickListener {
                 val action =
@@ -91,7 +100,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             }
             etSearch.addTextChangedListener {
                 itemAdapter.filter(it)
-                savedInstanceState?.putString("search_text",it.toString())   //todo restore searched text after filter
+                savedInstanceState?.putString(
+                    "search_text",
+                    it.toString()
+                )   //todo restore searched text after filter
             }
         }
 
@@ -117,7 +129,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         lifecycleScope.launch {
             val items = cachingRepo.getAllDataFromDb()
             listItems = items.map {
-                SearchListItem(it)
+                SearchListItem(it, makeItemBookmarklivedata)
             }.filter {
                 if (args.filteredToggleData != 0)
                     return@filter it.data.type == args.filteredToggleData

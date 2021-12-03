@@ -1,18 +1,17 @@
 package ir.behnawwm.golestanhelper.views.main.fragments.search
 
-import android.animation.Animator
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.isVisible
+import androidx.lifecycle.MutableLiveData
 import com.mikepenz.fastadapter.binding.AbstractBindingItem
 import ir.behnawwm.golestanhelper.R
 import ir.behnawwm.golestanhelper.data.database.entity.Request
-import ir.behnawwm.golestanhelper.databinding.ItemList2Binding
 import ir.behnawwm.golestanhelper.databinding.ItemList3Binding
 
-
-class SearchListItem(val data: Request) :
+class SearchListItem(
+    val data: Request,
+    val makeItemBookmarklivedata : MutableLiveData<Request>
+) :
     AbstractBindingItem<ItemList3Binding>() {
 
     override val type: Int
@@ -25,13 +24,19 @@ class SearchListItem(val data: Request) :
             tvCode.text = "$typeString ${data.code}"
             tvDate.text = "آخرین بازدید : هیچوقت"    //todo
 
+            if(data.isFavorite)
+                btnBookmark.setBackgroundResource(R.drawable.ic_bookmark)
+            else
+                btnBookmark.setBackgroundResource(R.drawable.ic_bookmark_border)
+
+
             btnBookmark.setOnClickListener {
                 if (data.isFavorite) {
                     btnBookmark.setBackgroundResource(R.drawable.ic_bookmark_border)
+                    makeItemBookmarklivedata.postValue(data.copy(isFavorite = !data.isFavorite))
                 } else {
                     btnBookmark.setBackgroundResource(R.drawable.ic_bookmark)
-                    //todo IMPORTANT add to bookmarked
-
+                    makeItemBookmarklivedata.postValue(data.copy(isFavorite = !data.isFavorite))
                 }
 
             }

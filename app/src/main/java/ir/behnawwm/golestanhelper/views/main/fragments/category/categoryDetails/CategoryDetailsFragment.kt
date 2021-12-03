@@ -67,8 +67,6 @@ class CategoryDetailsFragment : Fragment(R.layout.fragment_category_details) {
                 { v: View?, _: IAdapter<CategoryDetailsListItem>, item: CategoryDetailsListItem, _: Int ->
                     if (v != null) {
                         if (item.parentItems == null) {
-                            //todo set child items for showing codes!
-                            Toast.makeText(requireContext(), "residim!", Toast.LENGTH_SHORT).show()
                             initRecyclerView2(item.childItems!!)
                         } else
                             itemAdapter.set(item.parentItems)

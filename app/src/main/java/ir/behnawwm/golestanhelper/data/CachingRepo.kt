@@ -31,10 +31,11 @@ class CachingRepo @Inject constructor(
     private suspend fun getAllData(): List<DaneshjooData> =
         api.getDaneshjooData() + api.getOstadData()
 
-    private suspend fun insertRequest(request: Request) {
+    suspend fun insertRequest(request: Request) {
         dao.insertRequest(request)
     }
 
     suspend fun getAllDataFromDb(): List<Request> = dao.getAllRequests(prefs.intPeopleType)
+
 
 }
